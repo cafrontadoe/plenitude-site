@@ -1,0 +1,52 @@
+.banner {
+    // padding-top: 1rem;
+    // display: grid;
+    // gap: 1rem;
+    // grid-auto-rows: 9rem;
+    // grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
+    padding-top: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 9rem;
+    grid-template-columns: 1fr 2fr;
+}
+
+
+.logo {
+    height: 107px;
+    position: relative;
+    left: 30px;
+    top: 6px;
+}
+
+.art-next-meeting {
+    display: flex;
+    justify-content: end;
+    padding-right: 3rem;
+}
+
+.clock-icon {
+    font-size: 3rem;
+    height: 3rem;
+    width: 3rem;
+    position: relative;
+    bottom: 12px;
+}
+
+.next-meeting-label {
+    vertical-align: inherit;
+    position: relative;
+    bottom: 30px;
+    left: 11px;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+    .banner {
+      /* Diseño para la versión móvil */
+      grid-template-columns: 1fr;
+    }
+}

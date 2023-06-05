@@ -1,0 +1,42 @@
+#navBar {
+    background-color: black;
+}
+
+
+
+/* Estilos para los enlaces del navbar */
+nav a {
+    color: var(--dorado-color);
+    /* Color de las letras */
+    text-decoration: none;
+    /* Quitar subrayado de los enlaces */
+    transition: color 0.3s ease;
+    /* Transición suave de color */
+}
+
+/* Otros estilos */
+hr {
+    border-color: var(--dorado-color);
+    /* Color de la línea horizontal */
+}
+
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a:hover {
+    border: solid 1px #daa520;
+}
+
+.active {
+    border-bottom: solid 5px #daa520;
+}
+
+
+// center
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    margin: 0 10px;
+}
