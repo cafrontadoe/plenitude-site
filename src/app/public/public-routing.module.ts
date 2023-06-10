@@ -14,8 +14,9 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 
 const routes: Routes = [
 
-  { path: '', component: QuemSomosComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: '', component: ContactComponent },
+  { path: 'horario-contacto', component: ContactComponent },
+  { path: 'quem-somos', component: QuemSomosComponent },
       // { path: 'login', component: LoginComponent },
       // { path: 'sign-up', component: SignUpComponent }
 ]

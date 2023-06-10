@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { InstructionComponent } from './instruction/instruction.component';
+import { SliderComponent } from './slider/slider.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 
 
@@ -24,7 +25,8 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
     ContactComponent,
     LoginComponent,
     // SignUpComponent,
-    InstructionComponent
+    InstructionComponent,
+    SliderComponent
   ]  
 })
 export class PublicModule { }

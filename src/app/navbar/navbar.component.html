@@ -1,43 +1,44 @@
 <mat-sidenav-container>
-
 	<mat-sidenav #sidenav mode="over">
-		<label class="white-color">IGREJA PLENITUDE FUNCHAL</label>
+		<div style="display: flex;width: 8rem; margin-top: 3rem; height: 5rem;">
+			<img src="/assets/plenitude-logo.png" 
+				style="max-width: 100%; max-height: 100%;" alt="image">
+		</div>
 		<hr />
 		<nav>
-			<a class="font-nav" routerLink="home" (click)="clickHandler()" routerLinkActive="active">Quem somos</a>
-			<a class="font-nav" routerLink="about" (click)="clickHandler()" routerLinkActive="active">Horários e
+			<a class="font-nav" routerLink="public/horario-contacto" routerLinkActive="active">Horários e
 				contato</a>
-			<a class="font-nav" routerLink="login" (click)="clickHandler()" routerLinkActive="active">Testemunhos</a>
-			<a class="font-nav" routerLink="contact" (click)="clickHandler()" routerLinkActive="active">Gáleria</a>
-			<a class="font-nav" routerLink="contact" (click)="clickHandler()" routerLinkActive="active">Donaciones</a>
-			<a class="font-nav" routerLink="contact" (click)="clickHandler()" routerLinkActive="active">
+			<a class="font-nav" routerLink="public/quem-somos" routerLinkActive="active">Quem somos </a>
+			<a class="font-nav" routerLink="/login" routerLinkActive="active">Testemunhos</a>
+			<a class="font-nav" routerLink="contact" routerLinkActive="active">Gáleria</a>
+			<a class="font-nav" routerLink="contact" routerLinkActive="active">Donaciones</a>
+			<a class="font-nav" routerLink="contact" routerLinkActive="active">
 				<mat-icon class="color-gold">home</mat-icon>
 			</a>
-			<!-- <a routerLink="Doações"   (click)="clickHandler()" routerLinkActive="active">Doações</a> -->
 		</nav>
 	</mat-sidenav>
 
 
-
+	<!-- Mobile -->
 	<mat-sidenav-content>
-		<mat-toolbar id="navBar">
+		<mat-toolbar id="navBar" class="position-relative">
 			<header style="display: block;">
-				<mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+				<mat-icon class="color-gold z-index-1" (click)="sidenav.toggle()">menu</mat-icon>
+				
+				<label class="color-gold position-absolute label-mobile-menu">IGREJA PLENITUDE FUNCHAL</label>
+				
 				<nav>
-					<a class="font-nav active" routerLink="quem-somos" class="font-nav active"
+					<a class="font-nav z-index-1 active" routerLink="public/horario-contacto" class="font-nav active"
 						routerLinkActive="active">
-						Quem somos</a>
-					<a class="font-nav" routerLink="about" routerLinkActive="active">Horários e contato</a>
-					<a class="font-nav" routerLink="login" routerLinkActive="active">Testemunhos</a>
-					<a class="font-nav" routerLink="contact" routerLinkActive="active">Gáleria</a>
-					<a class="font-nav" routerLink="contact" (click)="clickHandler()"
-						routerLinkActive="active">Doações</a>
-					<a routerLink="contact" (click)="clickHandler()" routerLinkActive="active">
-						<!-- <mat-icon class="color-gold">home</mat-icon> -->
+						Horários e contato</a>
+					<a class="font-nav z-index-1" routerLink="public/quem-somos" routerLinkActive="active">Quem
+						somos</a>
+					<a class="font-nav z-index-1" routerLink="login" routerLinkActive="active">Testemunhos</a>
+					<a class="font-nav z-index-1" routerLink="contact" routerLinkActive="active">Gáleria</a>
+					<a class="font-nav z-index-1" routerLink="contact" routerLinkActive="active">Doações</a>
+					<a routerLink="contact z-index-1" routerLinkActive="active">
 						<mat-icon class="color-gold display-inline">home</mat-icon>
-
 					</a>
-					<!-- <a routerLink="Doações" routerLinkActive="active">Doações</a> -->
 				</nav>
 			</header>
 		</mat-toolbar>

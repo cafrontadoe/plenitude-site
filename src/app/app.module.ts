@@ -9,10 +9,12 @@ import { RouterModule } from '@angular/router';
 import { NavBarComponent } from './navbar/navbar.component';
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './shared/material/material.module';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    FooterComponent
     ],
   imports: [
     BrowserModule,
@@ -20,7 +22,7 @@ import { MaterialModule } from './shared/material/material.module';
     BrowserAnimationsModule,
     RouterModule,
     SharedModule,
-    MaterialModule
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
