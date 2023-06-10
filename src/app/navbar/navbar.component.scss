@@ -3,3 +3,13 @@
     bottom: 14px;
 }
 
+.container-logo-mobile {
+    display: flex;
+    width: 8rem;
+    margin-top: 3rem;
+    height: 5rem;
+}
+
+.active {
+    border-bottom: solid 5px #daa520;
+  }

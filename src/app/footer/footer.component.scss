@@ -18,6 +18,10 @@
     left: 850px;
 }
 
+.mapa-footer-mobile {
+    position: relative;
+}
+
 .icon-facebook {
     top: -151px;
     left: 475px;
@@ -41,4 +45,34 @@ ul {
     z-index: 1;
     top: 124px;
     font-size: 20px;
+}
+
+
+
+
+
+
+
+// version laptop
+@media screen and (min-width: 769px) {
+
+    
+
+
+}
+
+
+/* Diseño para la versión móvil */
+@media (max-width: 768px) {
+
+    .menu-footer-mobile {
+        padding-top: 2rem;
+     grid-template-columns: 1fr;
+    position: relative;
+    bottom: 0%;
+    }
+
+    .menu-footer {
+        display: none;
+    }
 }

@@ -1,9 +1,3 @@
-
-.slideshow-container{
-    top: 100px;
-    position: relative;
-}
-
 .contacto-component-container {
     position: relative;
     width: 100%;
@@ -13,6 +7,31 @@
 
 .horarios {
    position: relative;
+}
+
+
+// MEETINGS SECTION
+.container-meetings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.horarios {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.title-horarios {
+    color: #f1d692;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.font-nav {
+    color: #f1d692;
+    font-size: 16px;
 }
 
 /* Diseño para la versión móvil */
