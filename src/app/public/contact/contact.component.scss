@@ -1,0 +1,23 @@
+
+.slideshow-container{
+    top: 100px;
+    position: relative;
+}
+
+.contacto-component-container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.horarios {
+   position: relative;
+}
+
+/* Diseño para la versión móvil */
+@media (max-width: 768px) {
+    .contacto-component-container {
+        bottom: 0;
+    }
+}

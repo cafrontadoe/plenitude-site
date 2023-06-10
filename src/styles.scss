@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 .font-nav {
   font-family: 'Acme', sans-serif;
@@ -9,6 +9,11 @@
 .font-guy {
   font-family: 'Albert Sans', sans-serif;
 }
+
+.font-indie {
+  font-family: 'Indie Flower', cursive;
+}
+
 
 :root {
   --dorado-color: #f1d692;
@@ -48,6 +53,18 @@ body {
   display: inline;
 }
 
+.display-grid {
+  display: grid;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-relative {
+  position: relative;
+}
+
 .mat-sidenav-container {
   height: 100vh;
 }
@@ -74,6 +91,7 @@ body {
 
 .mat-sidenav-container .mat-sidenav nav {
   margin-top: 15px;
+  display: grid;
 }
 
 .mat-sidenav-container .mat-sidenav nav a {
@@ -95,10 +113,8 @@ body {
 }
 
 .mat-sidenav-container .mat-sidenav-content .mat-toolbar {
-  height: 40px;
+  height: 50px;
   padding: 0px;
-  // background-color: var(--dorado-color);
-
 }
 
 .mat-sidenav-container .mat-sidenav-content .mat-toolbar header {
@@ -115,6 +131,7 @@ body {
   font-size: 32px;
   width: 32px;
   height: 32px;
+  
 }
 
 .mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a {
@@ -124,15 +141,14 @@ body {
   text-decoration: none;
   border-radius: 5px;
   font-size: 1.5rem;
+  z-index: 1;
 }
-
-
-
 
 // navbar color
 .mat-toolbar .mat-primary {
   background-color: black !important;
 }
+
 
 @media screen and (max-width: 1023px) {
   .mat-sidenav-container .mat-sidenav-content .mat-toolbar {
@@ -154,6 +170,57 @@ body {
   }
 }
 
+
+
+// NAVBAR
+
+
+#navBar {
+  background-color: black;
+}
+
+/* Estilos para los enlaces del navbar */
+nav a {
+  color: var(--dorado-color);
+  /* Color de las letras */
+  text-decoration: none;
+  /* Quitar subrayado de los enlaces */
+  transition: color 0.3s ease;
+  /* Transición suave de color */
+}
+
+/* Otros estilos */
+hr {
+  border-color: var(--dorado-color);
+  /* Color de la línea horizontal */
+}
+
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a:hover {
+  border: solid 1px #daa520;
+}
+
+.active {
+  border-bottom: solid 5px #daa520;
+}
+
+
+// center
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  margin: 0 10px;
+}
+
+
+
+
+
+
 @media screen and (min-width: 1024px) {
   .mat-sidenav-container .mat-sidenav-content .mat-toolbar header {
     max-width: 1024px;
@@ -164,4 +231,5 @@ body {
     max-width: 1024px;
     margin: 0 auto;
   }
+
 }

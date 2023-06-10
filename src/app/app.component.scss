@@ -1,18 +1,4 @@
-.banner {
-    // padding-top: 1rem;
-    // display: grid;
-    // gap: 1rem;
-    // grid-auto-rows: 9rem;
-    // grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
-    padding-top: 1rem;
-    display: grid;
-    gap: 1rem;
-    grid-auto-rows: 9rem;
-    grid-template-columns: 1fr 2fr;
-}
-
-
-.logo {
+.logo-container {
     height: 107px;
     position: relative;
     left: 30px;
@@ -43,10 +29,50 @@
     font-weight: 600;
 }
 
+.z-index-1 {
+    z-index: 1;
+}
 
-@media (max-width: 768px) {
+// version laptop
+@media screen and (min-width: 769px) {
+
     .banner {
-      /* Diseño para la versión móvil */
-      grid-template-columns: 1fr;
+        position: relative;
+        padding-top: 1rem;
+        display: grid;
+        gap: 1rem;
+        grid-auto-rows: 9rem;
+        grid-template-columns: 1fr 2fr;
+    }
+
+
+}
+
+
+/* Diseño para la versión móvil */
+@media (max-width: 768px) {
+
+    .mat-sidenav-container .mat-sidenav-content section {
+        bottom: 0;
+      }
+
+    .banner {
+        display: none;
+
+    }
+
+    .art-next-meeting {
+        display: none;
+    }
+
+    .logo-container {
+        height: 90px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contacto-component-container {
+        bottom: 0;
     }
 }

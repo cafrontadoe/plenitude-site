@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { MaterialModule } from './material/material.module';
 
+
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+  
   ],
   exports: [
     MaterialModule,
