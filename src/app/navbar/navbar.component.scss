@@ -10,6 +10,99 @@
     height: 5rem;
 }
 
-.active {
-    border-bottom: solid 5px #daa520;
-  }
+
+.logo-container {
+    height: 107px;
+    position: relative;
+    left: 30px;
+    top: 6px;
+}
+
+.art-next-meeting {
+    display: flex;
+    justify-content: end;
+    padding-right: 3rem;
+}
+
+.clock-icon {
+    font-size: 3rem;
+    height: 3rem;
+    width: 3rem;
+    position: relative;
+    bottom: 12px;
+}
+
+.next-meeting-label {
+    vertical-align: inherit;
+    position: relative;
+    bottom: 30px;
+    left: 11px;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.z-index-1 {
+    z-index: 1;
+}
+
+
+// version laptop
+@media screen and (min-width: 769px) {
+
+    .label-mobile-menu {
+        display: none;
+    }
+
+    .sidenav-movile{
+        display: none;
+    }
+
+    .banner {
+        position: relative;
+        padding-top: 1rem;
+        display: grid;
+        gap: 1rem;
+        grid-auto-rows: 7.6rem;
+        grid-template-columns: 1fr 2fr;
+    }
+
+
+}
+
+
+/* Diseño para la versión móvil */
+@media (max-width: 768px) {
+
+    .label-mobile-menu {
+        display: flex;
+    }
+
+    .sidenav-movile{
+        display: grid;
+    }
+
+    .mat-sidenav-container .mat-sidenav-content section {
+        bottom: 0;
+      }
+
+    .banner {
+        display: none;
+
+    }
+
+    .art-next-meeting {
+        display: none;
+    }
+
+    .logo-container {
+        height: 90px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contacto-component-container {
+        bottom: 0;
+    }
+}

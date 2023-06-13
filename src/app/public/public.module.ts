@@ -7,9 +7,10 @@ import { SharedModule } from '../shared/shared.module';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
-import { InstructionComponent } from './instruction/instruction.component';
 import { SliderComponent } from './slider/slider.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
+import { TestimonyComponent } from './testimony/testimony.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 
 
@@ -24,9 +25,9 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
     AboutComponent,
     ContactComponent,
     LoginComponent,
-    // SignUpComponent,
-    InstructionComponent,
-    SliderComponent
+    TestimonyComponent,
+    SliderComponent,
+    GalleryComponent
   ]  
 })
 export class PublicModule { }
