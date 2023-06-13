@@ -1,63 +1,65 @@
-.menu-footer {
-    position: relative;
-    top: 129px;
-    color: #daa520;
-
-}
-
-.footer {
-    padding-top: 2rem;
-    gap: 1rem;
-    // grid-template-columns: 1fr 2fr;
-    position: relative;
-    bottom: 0%;
-}
-
-.mapa-footer {
-    position: relative;
-    left: 850px;
-}
-
-.mapa-footer-mobile {
-    position: relative;
-}
-
-.icon-facebook {
-    top: -151px;
-    left: 475px;
-    height: 73px;
-    width: 75px;
-    font-size: 77px;
-    position: relative;
-    color:#ffd900;
-}
-
-.icon-instagram {
-    top: -151px;
-    left: 500px;
-    height: 73px;
-    width: 75px;
-    position: relative;
-}
-
-ul {
-    position: relative;
-    z-index: 1;
-    top: 124px;
-    font-size: 20px;
-}
-
-
-
-
-
 
 
 // version laptop
 @media screen and (min-width: 769px) {
+    .menu-footer-mobile {
+        display: none;
+        
+    }
 
-    
+    .menu-footer {
+        position: relative;
+        display: grid;
+        padding-top: 2rem;
+     grid-template-columns: 1fr;
+    bottom: 0%; 
+    top: 129px;
+    font-size: 24px;
+    color: #daa520;
 
+    }
+    .contenido-footer{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .ul {
+        position: relative;
+        display: grid;
+        z-index: 1;
+        top: -33px;
+        font-size: 24px;
+    }
+
+    .mapa-footer {
+        position: relative;
+        display: grid;
+
+    }
+
+   .social-media{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .icon-facebook {
+        top: 60px;
+        height: 73px;
+        width: 75px;
+        font-size: 77px;
+        position: relative;
+        color: white;
+    }
+
+    .icon-instagram {
+        top: 60px;
+        height: 73px;
+        width: 75px;
+        position: relative;
+    }
+
+   }
 
 }
 
@@ -66,13 +68,45 @@ ul {
 @media (max-width: 768px) {
 
     .menu-footer-mobile {
+        position: relative;
+        display: grid;
         padding-top: 2rem;
-     grid-template-columns: 1fr;
-    position: relative;
+     grid-template-columns: 1fr 1fr;
     bottom: 0%;
     }
 
     .menu-footer {
         display: none;
     }
+
+
+    .mapa-footer-mobile {
+        position: relative;
+       display: grid;
+}
+ 
+  .social-media-mobile {
+    
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+    .icon-facebook {
+        top: 63px;
+        height: 73px;
+        width: 75px;
+        font-size: 77px;
+        position: relative;
+        color:white;
+    }
+
+    .icon-instagram {
+        top: 63px;
+        height: 73px;
+        width: 75px;
+        position: relative;
+    }
+
 }
