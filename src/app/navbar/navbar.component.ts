@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatSidenav} from '@angular/material/sidenav';
+import { NavigationEnd, Router } from '@angular/router';
 
 
 @Component({
@@ -11,8 +12,25 @@ export class NavBarComponent implements OnInit {
   @ViewChild('sidenav') sidenav: MatSidenav | undefined;
 
   opened: boolean = false;
+  public activeTab: any;
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.activeTab = "Demo";
+    this.router.events.subscribe((event: any) => {
+
+        if (event instanceof NavigationEnd) {
+            this.activeTab = event.url;
+              console.log(event);
+        }
+
+
+    });
+  }
+
+  onSelectTab(newTab: string): void {
+    this.activeTab = newTab;
+    this.router.navigate([newTab]);
+  }
 
   ngOnInit() {
   }

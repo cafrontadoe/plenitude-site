@@ -1,49 +1,117 @@
 <mat-sidenav-container>
-	<mat-sidenav #sidenav mode="over">
-		<div class="container-logo-mobile">
+  <!-- Mobile -->
+  <mat-sidenav #sidenav mode="over" class="sidenav-movile">
+    <div class="container-logo-mobile">
+      <img
+        src="/assets/plenitude-logo.png"
+        style="max-width: 100%; max-height: 100%"
+        alt="image"
+      />
+    </div>
+    <hr />
+    <nav>
+      <a
+        class="font-nav"
+        routerLink="public"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Horários e contato</a
+      >
+      <a
+        class="font-nav"
+        routerLink="public/quem-somos"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Quem somos
+      </a>
+      <a
+        class="font-nav"
+        routerLink="public/testimony"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Testemunhos</a
+      >
+      <a
+        class="font-nav"
+        routerLink="public/gallery"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Gáleria</a
+      >
+      <a class="font-nav" routerLink="contact" routerLinkActive="active"
+        >Donaciones</a
+      >
+    </nav>
+  </mat-sidenav>
+
+  <!-- web -->
+  <mat-sidenav-content>
+	<div class="banner bg-black">
+		<article class="logo-container">
 			<img src="/assets/plenitude-logo.png" 
 				style="max-width: 100%; max-height: 100%;" alt="image">
-		</div>
-		<hr />
-		<nav>
-			<a class="font-nav" routerLink="public/horario-contacto" routerLinkActive="active">Horários e
-				contato</a>
-			<a class="font-nav" routerLink="public/quem-somos" routerLinkActive="active">Quem somos </a>
-			<a class="font-nav" routerLink="/login" routerLinkActive="active">Testemunhos</a>
-			<a class="font-nav" routerLink="contact" routerLinkActive="active">Gáleria</a>
-			<a class="font-nav" routerLink="contact" routerLinkActive="active">Donaciones</a>
-			<a class="font-nav" routerLink="contact" routerLinkActive="active">
-				<mat-icon class="color-gold">home</mat-icon>
-			</a>
-		</nav>
-	</mat-sidenav>
+		</article>
+		<article class="art-next-meeting">
+			<div>
+				<h4 class="color-gold font-nav font-size-13">Próxima reunião</h4>
+				<mat-icon class="color-gold clock-icon">access_time</mat-icon>
+				<span class="next-meeting-label color-white font-guy">Quarta Feira 19:00 h</span>
+			</div>
+		</article>
+	</div>
+    <mat-toolbar id="navBar" class="position-relative">
+      <header style="display: block">
+        <mat-icon class="color-gold z-index-1" (click)="sidenav.toggle()"
+          >menu</mat-icon
+        >
 
+        <label class="color-gold position-absolute label-mobile-menu"
+          >IGREJA PLENITUDE FUNCHAL</label
+        >
 
-	<!-- Mobile -->
-	<mat-sidenav-content>
-		<mat-toolbar id="navBar" class="position-relative">
-			<header style="display: block;">
-				<mat-icon class="color-gold z-index-1" (click)="sidenav.toggle()">menu</mat-icon>
-				
-				<label class="color-gold position-absolute label-mobile-menu">IGREJA PLENITUDE FUNCHAL</label>
-				
-				<nav>
-					<a class="font-nav z-index-1 active" routerLink="public/horario-contacto" class="font-nav active"
-						routerLinkActive="active">
-						Horários e contato</a>
-					<a class="font-nav z-index-1" routerLink="public/quem-somos" routerLinkActive="active">Quem
-						somos</a>
-					<a class="font-nav z-index-1" routerLink="login" routerLinkActive="active">Testemunhos</a>
-					<a class="font-nav z-index-1" routerLink="contact" routerLinkActive="active">Gáleria</a>
-					<a class="font-nav z-index-1" routerLink="contact" routerLinkActive="active">Doações</a>
-					<a routerLink="contact z-index-1" routerLinkActive="active">
-						<mat-icon class="color-gold display-inline">home</mat-icon>
-					</a>
-				</nav>
-			</header>
-		</mat-toolbar>
-		<section>
-			<router-outlet></router-outlet>
-		</section>
-	</mat-sidenav-content>
+        <nav>
+          <a
+            class="font-nav"
+            routerLink="public"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Horários e contato</a
+          >
+          <a
+            class="font-nav"
+            routerLink="public/quem-somos"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Quem somos
+          </a>
+          <a
+            class="font-nav"
+            routerLink="public/testimony"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Testemunhos</a
+          >
+          <a
+            class="font-nav"
+            routerLink="public/gallery"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Gáleria</a
+          >
+          <a
+            class="font-nav z-index-1"
+            routerLink="contact"
+            routerLinkActive="active"
+            >Doações</a
+          >
+          <a routerLink="contact z-index-1" routerLinkActive="active">
+            <mat-icon class="color-gold display-inline">home</mat-icon>
+          </a>
+        </nav>
+      </header>
+    </mat-toolbar>
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  </mat-sidenav-content>
 </mat-sidenav-container>
