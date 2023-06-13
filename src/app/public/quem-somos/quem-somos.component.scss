@@ -8,20 +8,19 @@
 
 
 .title-quem-somos {
-    color: goldenrod;
-    font-size: xxx-large;
-    position: relative;
-    top: 100px;
-    margin-left: 267px;
+  height: 28px;
+  color: goldenrod;
+  font-size: xxx-large;
+  position: relative;
+  top: 100px;
+  display: grid;
+  justify-content: center;
 }
 .nossa-historia{
-    bottom: auto;
- position: relative;
- margin-left: -113px;
-    margin-right: 143px;
-    top: 146px;
-    font-size: larger;
-    overflow: hidden;
+  position: relative;
+  top: 146px;
+  font-size: larger;
+  overflow: hidden;
 }
 
 .read-more{
@@ -31,7 +30,6 @@
 .doctrina{
 position: relative;
 top: 122px;
-margin-left: -87px;
 font-family: 'Indie Flower';
 font-size: x-large;
 }
