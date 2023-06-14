@@ -1,108 +1,104 @@
+#navBar {
+  background-color: #000000;
+  height: 5rem;
+}
+
+// center
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10rem;
+}
+
+nav a {
+  margin: 0 10px;
+}
+
 .label-mobile-menu {
-    right: 1rem;
-    bottom: 14px;
+  right: 1rem;
+  bottom: 14px;
 }
 
 .container-logo-mobile {
-    display: flex;
-    width: 8rem;
-    margin-top: 3rem;
-    height: 5rem;
+  display: flex;
+  width: 8rem;
+  margin-top: 3rem;
+  height: 5rem;
 }
-
 
 .logo-container {
-    height: 107px;
-    position: relative;
-    left: 30px;
-    top: 6px;
-}
-
-.art-next-meeting {
-    display: flex;
-    justify-content: end;
-    padding-right: 3rem;
-}
-
-.clock-icon {
-    font-size: 3rem;
-    height: 3rem;
-    width: 3rem;
-    position: relative;
-    bottom: 12px;
-}
-
-.next-meeting-label {
-    vertical-align: inherit;
-    position: relative;
-    bottom: 30px;
-    left: 11px;
-
-    font-size: 1.2rem;
-    font-weight: 600;
+  position: absolute;
+  width: 9rem;
+  margin-left: 0.5rem;
+  bottom: 0px;
+  left: 3rem;
 }
 
 .z-index-1 {
-    z-index: 1;
+  z-index: 1;
 }
-
 
 // version laptop
 @media screen and (min-width: 769px) {
+  .label-mobile-menu {
+    display: none;
+  }
 
-    .label-mobile-menu {
-        display: none;
-    }
+  .sidenav-movile {
+    display: none;
+  }
 
-    .sidenav-movile{
-        display: none;
-    }
+  #navBar {
+    position: fixed;
+    z-index: 10;
+  }
 
-    .banner {
-        position: relative;
-        padding-top: 1rem;
-        display: grid;
-        gap: 1rem;
-        grid-auto-rows: 7.6rem;
-        grid-template-columns: 1fr 2fr;
-    }
-
-
+  #content {
+    margin-top: 5rem;
+  }
 }
-
 
 /* Diseño para la versión móvil */
 @media (max-width: 768px) {
+  .label-mobile-menu {
+    display: flex;
+  }
 
-    .label-mobile-menu {
-        display: flex;
-    }
+  .sidenav-movile {
+    display: grid;
+  }
 
-    .sidenav-movile{
-        display: grid;
-    }
+  .mat-sidenav-container .mat-sidenav-content section {
+    bottom: 0;
+  }
 
-    .mat-sidenav-container .mat-sidenav-content section {
-        bottom: 0;
-      }
+  .logo-container {
+    height: 90px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+  }
 
-    .banner {
-        display: none;
+  .contacto-component-container {
+    bottom: 0;
+  }
 
-    }
+  .logo-container {
+    display: none;
+  }
 
-    .art-next-meeting {
-        display: none;
-    }
+  #navBar {
+    height: 3rem;
+    position: fixed;
+    z-index: 1;
+  }
 
-    .logo-container {
-        height: 90px;
-        left: 0;
-        display: flex;
-        justify-content: center;
-    }
+  nav {
+    margin-left: 0;
+  }
 
-    .contacto-component-container {
-        bottom: 0;
-    }
+  #content {
+    margin-top: 3rem;
+  }
 }
