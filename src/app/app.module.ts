@@ -10,6 +10,7 @@ import { NavBarComponent } from './navbar/navbar.component';
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './shared/material/material.module';
 import { FooterComponent } from './footer/footer.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { FooterComponent } from './footer/footer.component';
     RouterModule,
     SharedModule,
     MaterialModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
