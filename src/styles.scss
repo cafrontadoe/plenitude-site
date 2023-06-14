@@ -150,16 +150,6 @@ nav a.active {
 }
 
 
-
-
-
-
-
-
-#navBar {
-  background-color: black;
-}
-
 /* Estilos para los enlaces del navbar */
 nav a {
   color: var(--white-color);
@@ -182,16 +172,7 @@ hr {
 }
 
 
-// center
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-nav a {
-  margin: 0 10px;
-}
 
 /* Diseño para la versión móvil */
 @media (max-width: 768px) {
