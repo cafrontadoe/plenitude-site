@@ -1,49 +1,113 @@
 <mat-sidenav-container>
-	<mat-sidenav #sidenav mode="over">
-		<div class="container-logo-mobile">
-			<img src="/assets/plenitude-logo.png" 
-				style="max-width: 100%; max-height: 100%;" alt="image">
-		</div>
-		<hr />
-		<nav>
-			<a class="font-nav" routerLink="public/horario-contacto" routerLinkActive="active">Horários e
-				contato</a>
-			<a class="font-nav" routerLink="public/quem-somos" routerLinkActive="active">Quem somos </a>
-			<a class="font-nav" routerLink="/login" routerLinkActive="active">Testemunhos</a>
-			<a class="font-nav" routerLink="contact" routerLinkActive="active">Gáleria</a>
-			<a class="font-nav" routerLink="contact" routerLinkActive="active">Donaciones</a>
-			<a class="font-nav" routerLink="contact" routerLinkActive="active">
-				<mat-icon class="color-gold">home</mat-icon>
-			</a>
-		</nav>
-	</mat-sidenav>
+  <!-- Mobile -->
+  <mat-sidenav #sidenav mode="over" class="sidenav-movile">
+    <div class="container-logo-mobile">
+      <img
+        src="/assets/plenitude-logo.png"
+        style="max-width: 100%; max-height: 100%"
+        alt="image"
+      />
+    </div>
+    <hr />
+    <nav>
+      <a
+        class="font-nav"
+        routerLink="public"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Horários e contato</a
+      >
+      <a
+        class="font-nav"
+        routerLink="public/quem-somos"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Quem somos
+      </a>
+      <a
+        class="font-nav"
+        routerLink="public/testimony"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Testemunhos</a
+      >
+      <a
+        class="font-nav"
+        routerLink="public/gallery"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Gáleria</a
+      >
+      <a class="font-nav" routerLink="contact" routerLinkActive="active"
+        >Donaciones</a
+      >
+    </nav>
+  </mat-sidenav>
 
+  <!-- web -->
+  <mat-sidenav-content>
+    
+    <mat-toolbar id="navBar" class="position-relative">
 
-	<!-- Mobile -->
-	<mat-sidenav-content>
-		<mat-toolbar id="navBar" class="position-relative">
-			<header style="display: block;">
-				<mat-icon class="color-gold z-index-1" (click)="sidenav.toggle()">menu</mat-icon>
-				
-				<label class="color-gold position-absolute label-mobile-menu">IGREJA PLENITUDE FUNCHAL</label>
-				
-				<nav>
-					<a class="font-nav z-index-1 active" routerLink="public/horario-contacto" class="font-nav active"
-						routerLinkActive="active">
-						Horários e contato</a>
-					<a class="font-nav z-index-1" routerLink="public/quem-somos" routerLinkActive="active">Quem
-						somos</a>
-					<a class="font-nav z-index-1" routerLink="login" routerLinkActive="active">Testemunhos</a>
-					<a class="font-nav z-index-1" routerLink="contact" routerLinkActive="active">Gáleria</a>
-					<a class="font-nav z-index-1" routerLink="contact" routerLinkActive="active">Doações</a>
-					<a routerLink="contact z-index-1" routerLinkActive="active">
-						<mat-icon class="color-gold display-inline">home</mat-icon>
-					</a>
-				</nav>
-			</header>
-		</mat-toolbar>
-		<section>
-			<router-outlet></router-outlet>
-		</section>
-	</mat-sidenav-content>
+      <header style="display: block">
+        <article class="logo-container z-index-1">
+          <img
+            src="/assets/plenitude-logo.png"
+            style="max-width: 100%; max-height: 100%"
+            alt="image"
+          />
+        </article>
+        <mat-icon class="color-gold z-index-1" (click)="sidenav.toggle()"
+          >menu</mat-icon
+        >
+
+        <label id="label-mobile-title" class="color-gold position-absolute label-mobile-menu"
+          >IGREJA PLENITUDE FUNCHAL</label
+        >
+
+        <nav>
+          <a
+            class="font-nav"
+            routerLink="public"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Horários e contato</a
+          >
+          <a
+            class="font-nav"
+            routerLink="public/quem-somos"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Quem somos
+          </a>
+          <a
+            class="font-nav"
+            routerLink="public/testimony"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Testemunhos</a
+          >
+          <a
+            class="font-nav"
+            routerLink="public/gallery"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Gáleria</a
+          >
+          <a
+            class="font-nav z-index-1"
+            routerLink="contact"
+            routerLinkActive="active"
+            >Doações</a
+          >
+          <a routerLink="contact z-index-1" routerLinkActive="active">
+            <mat-icon class="color-gold display-inline">home</mat-icon>
+          </a>
+        </nav>
+      </header>
+    </mat-toolbar>
+    <section id="content">
+      <router-outlet></router-outlet>
+    </section>
+  </mat-sidenav-content>
 </mat-sidenav-container>

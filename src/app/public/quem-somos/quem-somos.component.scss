@@ -1,60 +1,80 @@
-.imagen-heart {
-  left: 313px;
-  position: relative;
-  top: 121px;
-  width: 180px;
 
+
+.container-imagen-historia{
+display: flex;
+position: relative;
+justify-content: center;
+top: 66px;
 }
 
+.imagen-heart {
+ display: grid;
+  position: relative;
+  width: 300px;
+  
+}
 
 .title-quem-somos {
-    color: goldenrod;
-    font-size: xxx-large;
-    position: relative;
-    top: 100px;
-    margin-left: 267px;
+ color: goldenrod;
+  font-size: xx-large;
+  position: relative;
+  display: grid;
+  justify-content: center;
 }
 .nossa-historia{
-    bottom: auto;
- position: relative;
- margin-left: -113px;
-    margin-right: 143px;
-    top: 146px;
-    font-size: larger;
-    overflow: hidden;
+  position: relative;
+  display: grid;
+  font-size: larger;
+  overflow: hidden;
 }
 
 .read-more{
     color: goldenrod;
+    cursor: pointer;
 }
 
 .doctrina{
 position: relative;
-top: 122px;
-margin-left: -87px;
 font-family: 'Indie Flower';
 font-size: x-large;
 }
 
+.container-sedes {
+  position: relative;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+}
+
 .title-sedes{
     position: relative;
-    top: 145px;
+    display: grid;
     margin-left: 267px;
-    font-size: xxx-large;
+    font-size: xx-large;
     color: goldenrod;
  }
 
  .mapa-sedes{
-    top: 120px;
-    left: 100px;
-    position: relative;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  width: 70vw;
+  max-width: 1000px;
+  min-width: 250px;
+  margin: auto;
+ }
+
+ .container-lideres {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
  }
 
  .title-lideres{
-    top: 200px;
     position: relative;
     margin-left: 267px;
-    font-size: xxx-large;
+    font-size: xx-large;
     color: goldenrod;  
  }
 
@@ -63,9 +83,9 @@ font-size: x-large;
     height: 214px;
     border-radius: 50%;
     overflow: hidden;
-    top: 197px;
     left: 345px;
     position: relative;
+
   }
   
   .circular-image-pastor img {
@@ -78,22 +98,29 @@ font-size: x-large;
   .nome-pastores{
     position: relative;
     margin-left: 296px;
-    top: 214px;
     font-size: x-large;
     }
    
-  .title-ministerios{
-    top: 244px;
+  .container-ministerios {
+    display: grid;
     position: relative;
-    margin-left: 267px;
-    font-size: xxx-large;
+    justify-content: center;
+    grid-template-columns: 1fr;
+  }
+
+  .title-ministerios{
+    display: grid;
+    justify-content: center;
+    position: relative;
+    font-size: xx-large;
     color: goldenrod;
+    margin: 50px;
   }
   
 
   * {box-sizing: border-box;}
 body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
+.mySlides {display: flex;}
 img {vertical-align: middle;}
 
 /* Slideshow container */
@@ -101,7 +128,8 @@ img {vertical-align: middle;}
   max-width: 700px;
   position: relative;
   margin: auto;
-  top:30px
+  display: flex;
+  justify-content: center;
 }
 
 /* Caption text */
@@ -135,4 +163,19 @@ img {vertical-align: middle;}
   transition: background-color 3.0s ease;
 }
   
+
+// version web--
+@media (max-width: 769px) {
+}
+
+// ---version mobile 
+@media (max-width: 768px) {
+  .funcionamiento-somos { 
+     display: grid;
+     position: relative;
+   }
+
+   
   
+
+}
