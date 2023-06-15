@@ -10,7 +10,7 @@
     .menu-footer {
         position: relative;
         display: grid;
-        padding-top: 2rem;
+        padding-top: 1rem;
      grid-template-columns: 1fr;
     bottom: 0%; 
     top: 129px;
@@ -35,28 +35,32 @@
     .mapa-footer {
         position: relative;
         display: grid;
+        max-width: 2000px;
 
     }
 
    .social-media{
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 6rem 9rem;
+    justify-content: center;
 
     .icon-facebook {
         top: 60px;
         height: 73px;
         width: 75px;
-        font-size: 77px;
+        font-size: 69px;
         position: relative;
         color: white;
+        display: grid;
     }
 
     .icon-instagram {
         top: 60px;
-        height: 73px;
-        width: 75px;
+        height: 58px;
+        width: 58px;
         position: relative;
+        display: grid;
     }
 
    }
@@ -70,7 +74,7 @@
     .menu-footer-mobile {
         position: relative;
         display: grid;
-        padding-top: 2rem;
+        padding-top: 1rem;
      grid-template-columns: 1fr 1fr;
     bottom: 0%;
     }
@@ -83,30 +87,36 @@
     .mapa-footer-mobile {
         position: relative;
        display: grid;
+       width: 70vw;
+    max-width: 1000px;
+    min-width: 250px;
+    margin: auto;
 }
  
   .social-media-mobile {
     
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 
     .icon-facebook {
-        top: 63px;
         height: 73px;
         width: 75px;
-        font-size: 77px;
+        font-size: 69px;
         position: relative;
         color:white;
+        display: grid;
+        justify-content: center;
     }
 
     .icon-instagram {
-        top: 63px;
-        height: 73px;
-        width: 75px;
+        height: 58px;
+        width: 58px;
         position: relative;
+        display: grid;
+        justify-content: center;
     }
 
 }
