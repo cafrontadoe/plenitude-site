@@ -1,122 +1,44 @@
-
-
 // version laptop
-@media screen and (min-width: 769px) {
-    .menu-footer-mobile {
-        display: none;
-        
-    }
 
-    .menu-footer {
-        position: relative;
-        display: grid;
-        padding-top: 1rem;
-     grid-template-columns: 1fr;
-    bottom: 0%; 
-    top: 129px;
+.menu-footer {
+    position: inherit;
+    display: grid;
+    padding-top: 1rem;
+    bottom: 0%;
     font-size: 24px;
     color: #daa520;
-
-    }
-    .contenido-footer{
-        position: relative;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .ul {
-        position: relative;
-        display: grid;
-        z-index: 1;
-        top: -33px;
-        font-size: 24px;
-    }
-
-    .mapa-footer {
-        position: relative;
-        display: grid;
-        max-width: 2000px;
-
-    }
-
-   .social-media{
-    position: relative;
-    display: grid;
-    grid-template-columns: 6rem 9rem;
-    justify-content: center;
-
-    .icon-facebook {
-        top: 60px;
-        height: 73px;
-        width: 75px;
-        font-size: 69px;
-        position: relative;
-        color: white;
-        display: grid;
-    }
-
-    .icon-instagram {
-        top: 60px;
-        height: 58px;
-        width: 58px;
-        position: relative;
-        display: grid;
-    }
-
-   }
-
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
 }
 
+#text-footer {
+    font-size: 8px;
+    color: antiquewhite;
+}
+
+.text-footer-uno {
+    display: grid;
+    justify-content: center;
+    text-align: -webkit-center;
+}
+
+.text-footer-dos {
+    margin: 0;
+    justify-content: center;
+    text-align: -webkit-center;
+    position: relative;
+    display: grid;
+}
+
+
+
+@media screen and (min-width: 769px) {}
 
 /* Diseño para la versión móvil */
-@media (max-width: 768px) {
-
-    .menu-footer-mobile {
-        position: relative;
-        display: grid;
-        padding-top: 1rem;
-     grid-template-columns: 1fr 1fr;
-    bottom: 0%;
-    }
-
-    .menu-footer {
-        display: none;
-    }
+@media (max-width: 768px) {}
 
 
-    .mapa-footer-mobile {
-        position: relative;
-       display: grid;
-       width: 70vw;
-    max-width: 1000px;
-    min-width: 250px;
-    margin: auto;
-}
- 
-  .social-media-mobile {
-    
-    position: relative;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-}
-
-
-    .icon-facebook {
-        height: 73px;
-        width: 75px;
-        font-size: 69px;
-        position: relative;
-        color:white;
-        display: grid;
-        justify-content: center;
-    }
-
-    .icon-instagram {
-        height: 58px;
-        width: 58px;
-        position: relative;
-        display: grid;
-        justify-content: center;
-    }
-
+.text-footer {
+    font-size: 7px;
+    left: -95px;
+    top: -22px;
 }
