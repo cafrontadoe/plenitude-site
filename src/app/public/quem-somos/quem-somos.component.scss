@@ -1,4 +1,5 @@
 
+
 .container-imagen-historia{
 display: flex;
 position: relative;
@@ -15,7 +16,7 @@ top: 66px;
 
 .title-quem-somos {
  color: goldenrod;
-  font-size: xxx-large;
+  font-size: xx-large;
   position: relative;
   display: grid;
   justify-content: center;
@@ -38,22 +39,42 @@ font-family: 'Indie Flower';
 font-size: x-large;
 }
 
+.container-sedes {
+  position: relative;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+}
+
 .title-sedes{
     position: relative;
+    display: grid;
     margin-left: 267px;
-    font-size: xxx-large;
+    font-size: xx-large;
     color: goldenrod;
  }
 
  .mapa-sedes{
-    left: 100px;
-    position: relative;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  width: 70vw;
+  max-width: 1000px;
+  min-width: 250px;
+  margin: auto;
+ }
+
+ .container-lideres {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
  }
 
  .title-lideres{
     position: relative;
     margin-left: 267px;
-    font-size: xxx-large;
+    font-size: xx-large;
     color: goldenrod;  
  }
 
@@ -80,11 +101,18 @@ font-size: x-large;
     font-size: x-large;
     }
    
+  .container-ministerios {
+    display: grid;
+    position: relative;
+    justify-content: center;
+    grid-template-columns: 1fr;
+  }
+
   .title-ministerios{
     display: grid;
     justify-content: center;
     position: relative;
-    font-size: xxx-large;
+    font-size: xx-large;
     color: goldenrod;
     margin: 50px;
   }
@@ -135,3 +163,19 @@ img {vertical-align: middle;}
   transition: background-color 3.0s ease;
 }
   
+
+// version web--
+@media (max-width: 769px) {
+}
+
+// ---version mobile 
+@media (max-width: 768px) {
+  .funcionamiento-somos { 
+     display: grid;
+     position: relative;
+   }
+
+   
+  
+
+}
