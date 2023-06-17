@@ -11,6 +11,7 @@ import { SliderComponent } from './slider/slider.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { TestimonyComponent } from './testimony/testimony.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { PlacesService } from '../shared/services/places.service';
 
 
 
@@ -28,6 +29,9 @@ import { GalleryComponent } from './gallery/gallery.component';
     TestimonyComponent,
     SliderComponent,
     GalleryComponent
-  ]  
+  ],
+  providers: [
+    PlacesService,
+  ],
 })
 export class PublicModule { }
