@@ -1,24 +1,73 @@
+// .card {
+//     background-color: #fff;
+//     border-radius: 8px;
+//     margin-bottom: 16px;
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+//   }
+  
+//   .avatar img {
+//     border-radius: 50%;
+//   }
+  
+//   .mat-card-title,
+//   h6 {
+//     margin-bottom: 8px;
+//   }
+  
+//   .stars {
+//     display: flex;
+//   }
+  
+//   .color-stars {
+//     color: #f1d692;
+//   }
+  
+
+
 .card {
-    background-color: #fff;
-    border-radius: 8px;
-    margin-bottom: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .avatar img {
-    border-radius: 50%;
-  }
-  
-  .mat-card-title,
-  h6 {
-    margin-bottom: 8px;
-  }
-  
-  .stars {
-    display: flex;
-  }
-  
-  .color-stars {
-    color: #f1d692;
-  }
-  
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.avatar img {
+  border-radius: 50%;
+}
+
+.mat-card-title,
+h6 {
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: bold;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.color-stars {
+  color: #f1d692;
+}
+
+.mat-card-content {
+  margin-top: 16px;
+}
+
+p {
+  color: #555;
+  line-height: 1.4;
+}
+
+.card-divider {
+  margin-top: 16px;
+  border-top: 1px solid #ddd;
+}
