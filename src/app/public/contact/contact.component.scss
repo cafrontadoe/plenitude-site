@@ -14,15 +14,16 @@
     justify-content: center;
     align-items: center;
     height: 37vh;
-} 
+}
 
 .title-horarios {
     color: #f1d692;
     font-size: 2.7rem;
     margin-bottom: 20px;
     font-weight: 400;
-    
+
 }
+
 .horarios {
     position: relative;
     display: grid;
@@ -31,6 +32,7 @@
     list-style-type: none;
     padding: 0;
     font-size: 1.5rem;
+    margin-top: 0;
 }
 
 
@@ -55,10 +57,11 @@
     font-size: 2.7rem;
     margin-bottom: 1rem;
     font-weight: 400;
-}  
+    margin-top: 0;
+}
 
 
-.address {    
+.address {
     position: relative;
     display: grid;
     justify-content: center;
@@ -111,7 +114,7 @@
     top: 15px;
 
 }
-    
+
 .title-formulario {
     position: relative;
     display: grid;
@@ -126,7 +129,7 @@
     grid-template-columns: 1fr;
     grid-gap: 10px;
     width: 584px;
-} 
+}
 
 .form label {
     font-weight: bold;
@@ -142,19 +145,21 @@
 }
 
 .form button {
-    padding: 8px 16px;
-    background-color: #ffc73a;;
+    padding: 11px 16px;
+    background-color: #ffc73a;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 18px;
     width: 100%;
+    max-width: 12rem;
 }
-.button-enviar{
+
+.button-enviar {
     position: relative;
-    display: grid;
-    left: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .form button:hover {
@@ -163,14 +168,13 @@
 
 
 // version web--
-@media (max-width: 769px) {
-}
+@media (max-width: 769px) {}
 
 // /* Diseño para la versión móvil */
 
 @media (max-width: 768px) {
 
-     .container-meetings {
+    .container-meetings {
         display: grid;
         position: relative;
         grid-template-columns: 1fr;
@@ -180,44 +184,48 @@
         position: relative;
         display: grid;
         color: #f1d692;
-        font-size:2.1rem;
+        font-size: 2.1rem;
         justify-content: center;
     }
-        
+
     .horarios {
         font-size: 1.2rem;
     }
 
     .form {
         width: auto;
-    } 
+    }
 
-    
-        
-.container-address {
-    grid-template-columns: 1fr;
+
+
+    .container-address {
+        grid-template-columns: 1fr;
+    }
+
+
+    .title-address {
+        position: relative;
+        color: #f1d692;
+        font-size: 33.6px;
+
+    }
+
+    .address {
+        align-content: center;
+        font-size: 19.2px;
+
+    }
+
+    .address-uno {
+        font-size: 19.2px;
+    }
+
+    .container-formulario {
+        display: grid;
+        position: relative;
+    }
+
+    .form button {
+        margin-left: 10px;
+    }
 }
-
-
-.title-address {
-    position: relative;
-    color: #f1d692;
-    font-size: 33.6px;
-}
-
-.address {    
-    align-content: center;
-  font-size: 19.2px;
-
-}
-
-.address-uno {
-    font-size: 19.2px;
-}
-
-.container-formulario {
-    display: grid;
-    position: relative;
-}
-}
-
