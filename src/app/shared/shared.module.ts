@@ -16,7 +16,7 @@ import { MaterialModule } from './material/material.module';
     MaterialModule,
     FormsModule
   ],
-  declarations: []
+  declarations: [],
 })
 
 export class SharedModule { }
