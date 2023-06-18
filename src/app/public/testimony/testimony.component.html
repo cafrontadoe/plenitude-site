@@ -1,26 +1,41 @@
 <div id="googleReviewContainer" #googleReviewContainer></div>
-<section id='reviews'>
+<section>
     <div id="title">
-        <h4>Google Reviews</h4>
+        <h3>Google Reviews</h3>
     </div>
     <div id="reviews" class="row">
-        <div *ngFor="let review of reviews" class="card">
-            <mat-card-header>
-              <div class="avatar" mat-card-avatar>
-                <img src="{{ review.profile_photo_url }}" alt="Avatar" height="50" width="50" />
-              </div>
-              <mat-card-title>{{ review.author_name }}</mat-card-title>
-              <h6>{{ review.relative_time_description }}</h6>
-              <div class="stars">
-                <mat-icon *ngFor="let item of createRange(review.rating)" class="color-stars">grade</mat-icon>
-              </div>
+        <div class="card-add cursor-pointer">
+            <a href="https://search.google.com/local/writereview?placeid=ChIJX5qshlphYAwRaOTvfq48S1A" target="_blank">
+            <mat-card-header class="center-content mt-5">
+                <mat-icon class="color-gold icon-add">add</mat-icon>
             </mat-card-header>
             <mat-card-content>
-              <p>{{ review.text }}</p>
+                <h4 class="font-add-comment color-gold">Deixa o teu testemunho!</h4>
+            </mat-card-content>
+        </a>
+        </div>
+
+
+        <div *ngFor="let review of reviews" class="card">
+            <mat-card-header>
+                <div>
+                    <div class="avatar center-content" mat-card-avatar>
+                        <img src="{{ review.profile_photo_url }}" alt="Avatar" height="70" width="70" />
+                    </div>
+                    <mat-card-title class="center-content">{{ review.author_name }}</mat-card-title>
+                    <h6 class="center-content">{{ review.relative_time_description }}</h6>
+                    <div class="stars center-content">
+                        <mat-icon *ngFor="let item of createRange(review.rating)" class="color-stars">grade</mat-icon>
+                    </div>
+                </div>
+            </mat-card-header>
+            <mat-card-content>
+                <p>{{ review.text }}</p>
             </mat-card-content>
         </div>
     </div>
-    <div class="rowButton">
-        <a mat-raised-button href="${ALL_REVIEWS_LINK}" target="_blank">View all reviews</a>
+    <div class="rowButton cla">
+        <a 
+        mat-raised-button href="https://search.google.com/local/writereview?placeid=ChIJX5qshlphYAwRaOTvfq48S1A" target="_blank">View all reviews</a>
     </div>
 </section>
