@@ -6,6 +6,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 
+html, body {
+  height: 100%;
+}
+
 .font-add-comment {
   font-family: 'Pacifico', cursive;
 }
@@ -109,6 +113,10 @@ body {
   margin-bottom: .3rem;
 }
 
+.mt-5 {
+ margin-top: 5rem;
+}
+
 .mat-sidenav-container .mat-sidenav {
   background-color: rgb(10, 10, 10);
   padding: 10px;
@@ -156,8 +164,12 @@ nav a.active {
   cursor: pointer;
   font-size: 32px;
   width: 32px;
-  height: 32px;
-  
+  height: 32px; 
+}
+
+.read-more{
+  color: var(--dorado-color);
+  cursor: pointer;
 }
 
 .mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a {
