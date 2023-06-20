@@ -15,22 +15,28 @@ top: 66px;
 }
 
 .title-quem-somos {
- color: goldenrod;
-  font-size: xx-large;
+  color: #f1d692;
   position: relative;
   display: grid;
   justify-content: center;
+  font-size: 2.7rem;
+  font-weight: 400;
+  
 }
+
 .nossa-historia{
   position: relative;
   display: grid;
   font-size: larger;
   overflow: hidden;
+  text-align: justify;
 }
 
 
 .doctrina{
 position: relative;
+display: grid;
+text-align: justify;
 font-family: 'Indie Flower';
 font-size: x-large;
 }
@@ -38,26 +44,27 @@ font-size: x-large;
 .container-sedes {
   position: relative;
     display: grid;
-    justify-content: center;
+    align-items: center;
     grid-template-columns: 1fr;
 }
 
 .title-sedes{
-    position: relative;
-    display: grid;
-    margin-left: 267px;
-    font-size: xx-large;
-    color: goldenrod;
+  color: #f1d692;
+  font-size: 2.7rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+  justify-content: center;
  }
 
  .mapa-sedes{
   position: relative;
-  display: grid;
-  justify-content: center;
-  width: 70vw;
-  max-width: 1000px;
-  min-width: 250px;
-  margin: auto;
+    display: grid;
+    width: 70vw;
+    max-width: 1000px;
+    min-width: 250px;
+    margin: auto;
+   
+    
  }
 
  .container-lideres {
@@ -68,10 +75,12 @@ font-size: x-large;
  }
 
  .title-lideres{
-    position: relative;
-    margin-left: 267px;
-    font-size: xx-large;
-    color: goldenrod;  
+  margin-top: 0;
+  position: relative;
+       display: grid;
+       color: #f1d692;
+       font-size: 2.1rem;
+       justify-content: center; 
  }
 
  .circular-image-pastor {
@@ -79,8 +88,10 @@ font-size: x-large;
     height: 214px;
     border-radius: 50%;
     overflow: hidden;
-    left: 345px;
+    left: 403px;
     position: relative;
+    display: grid;
+    justify-content: center;
 
   }
   
@@ -93,8 +104,9 @@ font-size: x-large;
   
   .nome-pastores{
     position: relative;
-    margin-left: 296px;
-    font-size: x-large;
+    display: grid;
+    justify-content: center;
+    font-size: 26px;
     }
    
   .container-ministerios {
@@ -105,12 +117,12 @@ font-size: x-large;
   }
 
   .title-ministerios{
-    display: grid;
-    justify-content: center;
-    position: relative;
-    font-size: xx-large;
-    color: goldenrod;
-    margin: 50px;
+    margin-top: 0;
+  position: relative;
+       display: grid;
+       color: #f1d692;
+       font-size: 3.5rem;
+       justify-content: center;
   }
   
 
@@ -166,12 +178,14 @@ img {vertical-align: middle;}
 
 // ---version mobile 
 @media (max-width: 768px) {
-  .funcionamiento-somos { 
-     display: grid;
-     position: relative;
-   }
 
-   
-  
+  .nossa-historia{
+    margin: 21px;
+  }
+
+  .doctrina{
+    margin: 21px;
+  }
+
 
 }
