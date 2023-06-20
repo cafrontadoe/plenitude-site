@@ -30,3 +30,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 https://developers.google.com/maps/documentation/places/web-service/place-id
 
 https://search.google.com/local/writereview?placeid=ChIJX5qshlphYAwRaOTvfq48S1A
+
+## angular auth 
+https://www.positronx.io/full-angular-firebase-authentication-system/

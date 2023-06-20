@@ -12,6 +12,7 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { TestimonyComponent } from './testimony/testimony.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { PlacesService } from '../shared/services/places.service';
+import { DonationsComponent } from './donations/donations.component';
 
 
 
@@ -28,7 +29,8 @@ import { PlacesService } from '../shared/services/places.service';
     LoginComponent,
     TestimonyComponent,
     SliderComponent,
-    GalleryComponent
+    GalleryComponent,
+    DonationsComponent
   ],
   providers: [
     PlacesService,

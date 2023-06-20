@@ -38,7 +38,10 @@
         [routerLinkActiveOptions]="{ exact: true }"
         >Gáleria</a
       >
-      <a class="font-nav" routerLink="contact" routerLinkActive="active"
+      <a class="font-nav" 
+      routerLink="public/donations"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
         >Donaciones</a
       >
     </nav>
@@ -96,8 +99,9 @@
           >
           <a
             class="font-nav z-index-1"
-            routerLink="contact"
+            routerLink="public/donations"
             routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
             >Doações</a
           >
           <a routerLink="contact z-index-1" routerLinkActive="active">
