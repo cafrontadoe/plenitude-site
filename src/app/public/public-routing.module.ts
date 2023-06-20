@@ -4,6 +4,7 @@ import { ContactComponent } from './contact/contact.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { TestimonyComponent } from './testimony/testimony.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { DonationsComponent } from './donations/donations.component';
 
 
 
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'quem-somos', component: QuemSomosComponent },
   { path: 'testimony', component: TestimonyComponent },
   { path: 'gallery', component: GalleryComponent },
+  { path: 'donations', component: DonationsComponent },
 ]
 
 @NgModule({
