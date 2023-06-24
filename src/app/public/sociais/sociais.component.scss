@@ -1,0 +1,39 @@
+// .icon-facebook {
+//     display: grid;
+//     left: 30%;
+
+
+.facebook-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+    justify-items: right; 
+    align-items: center;
+    position: relative;
+    top: -540px;
+
+}
+ .icon-facebook {
+    width: 80px;
+     height: 80px;
+ }
+
+.instagram-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+    justify-items: right; 
+    align-items: center;
+    position: relative;
+    top: -540px;
+}
+
+.youtube-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+    justify-items: right; 
+    align-items: center;
+    position: relative;
+    top: -540px;
+}
