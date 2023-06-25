@@ -15,6 +15,8 @@ import { PlacesService } from '../shared/services/places.service';
 import { DonationsComponent } from './donations/donations.component';
 import { predicasComponent } from './predicas/predicas.component';
 import { SociaisComponent } from './sociais/sociais.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 
@@ -34,6 +36,8 @@ import { SociaisComponent } from './sociais/sociais.component';
     GalleryComponent,
     DonationsComponent,
     predicasComponent,
+    SignInComponent,
+    SignUpComponent,
     
   ],
   providers: [

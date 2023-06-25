@@ -19,6 +19,8 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from 'src/environments/environment.development';
 import { SociaisComponent } from './public/sociais/sociais.component';
+import { DashboardComponent } from './private/dashboard/dashboard.component';
+import { AuthService } from './shared/services/auth.service';
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { SociaisComponent } from './public/sociais/sociais.component';
     AppComponent,
     NavBarComponent,
     FooterComponent,
-    SociaisComponent
+    SociaisComponent,
+    DashboardComponent
     ],
   imports: [
     BrowserModule,
@@ -36,12 +39,17 @@ import { SociaisComponent } from './public/sociais/sociais.component';
     SharedModule,
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireStorageModule,
     // provideFirebaseApp(() => initializeApp({ ... })),
     // provideFirestore(() => getFirestore()),
     AngularFireAuthModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
 
+  ],
+  providers:[
+    AuthService
   ],
   
   bootstrap: [AppComponent]
