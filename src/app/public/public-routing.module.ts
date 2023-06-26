@@ -7,6 +7,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { DonationsComponent } from './donations/donations.component';
 import { SociaisComponent } from './sociais/sociais.component';
 import { predicasComponent } from './predicas/predicas.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'donations', component: DonationsComponent },
   { path: 'predicas', component: predicasComponent },
   { path: 'Sociais', component: SociaisComponent },
+  { path: 'sign-in', component: SignInComponent },
 ]
 
 @NgModule({
