@@ -13,6 +13,10 @@ import { TestimonyComponent } from './testimony/testimony.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { PlacesService } from '../shared/services/places.service';
 import { DonationsComponent } from './donations/donations.component';
+import { predicasComponent } from './predicas/predicas.component';
+import { SociaisComponent } from './sociais/sociais.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 
@@ -30,7 +34,11 @@ import { DonationsComponent } from './donations/donations.component';
     TestimonyComponent,
     SliderComponent,
     GalleryComponent,
-    DonationsComponent
+    DonationsComponent,
+    predicasComponent,
+    SignInComponent,
+    SignUpComponent,
+    
   ],
   providers: [
     PlacesService,

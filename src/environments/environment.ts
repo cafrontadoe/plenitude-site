@@ -6,6 +6,10 @@ export const environment = {
         projectId: 'plenitude-site',
         storageBucket: 'plenitude-site.appspot.com',
         // messagingSenderId: 'TU_MESSAGING_SENDER_ID',
-        appId: 'plenitude-site'
+        appId: 'plenitude-site',
+
+        databaseURL: "xxxxxxxxxxxxxxxxxxxxxxxx",
+        messagingSenderId: "xxxxxx",
+        measurementId: "xxxxxxxxxxxxxxxx"
     }
 };

@@ -5,6 +5,9 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { TestimonyComponent } from './testimony/testimony.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { DonationsComponent } from './donations/donations.component';
+import { SociaisComponent } from './sociais/sociais.component';
+import { predicasComponent } from './predicas/predicas.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 
 
@@ -15,6 +18,9 @@ const routes: Routes = [
   { path: 'testimony', component: TestimonyComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'donations', component: DonationsComponent },
+  { path: 'predicas', component: predicasComponent },
+  { path: 'Sociais', component: SociaisComponent },
+  { path: 'sign-in', component: SignInComponent },
 ]
 
 @NgModule({

@@ -39,11 +39,17 @@
         >Gáleria</a
       >
       <a class="font-nav" 
+      routerLink="public/predicas"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+        >Pregações </a
+      >
+      <a class="font-nav" 
       routerLink="public/donations"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
-        >Donaciones</a
-      >
+        >Doações </a>
+      
     </nav>
   </mat-sidenav>
 
@@ -97,13 +103,19 @@
             [routerLinkActiveOptions]="{ exact: true }"
             >Gáleria</a
           >
+          <a class="font-nav" 
+          routerLink="public/predicas"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+            >Pregações</a
+            >
           <a
             class="font-nav z-index-1"
             routerLink="public/donations"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }"
             >Doações</a
-          >
+              >
           <a routerLink="contact z-index-1" routerLinkActive="active">
             <mat-icon class="color-gold display-inline">home</mat-icon>
           </a>
@@ -112,6 +124,8 @@
     </mat-toolbar>
     <section id="content">
       <router-outlet></router-outlet>
+      <app-sociais></app-sociais>
+
     </section>
     <app-footer></app-footer> 
   </mat-sidenav-content>
