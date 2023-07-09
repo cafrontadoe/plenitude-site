@@ -9,18 +9,12 @@ import { NavBarComponent } from './navbar/navbar.component';
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './shared/material/material.module';
 import { FooterComponent } from './footer/footer.component';
-// firebase
-import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
-
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { AngularFireStorageModule } from '@angular/fire/compat/storage';
-import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from 'src/environments/environment.development';
 import { SociaisComponent } from './public/sociais/sociais.component';
 import { DashboardComponent } from './private/dashboard/dashboard.component';
 import { AuthService } from './shared/services/auth.service';
+import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -38,18 +32,16 @@ import { AuthService } from './shared/services/auth.service';
     RouterModule,
     SharedModule,
     MaterialModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule,
-    AngularFireStorageModule,
-    // provideFirebaseApp(() => initializeApp({ ... })),
-    // provideFirestore(() => getFirestore()),
-    AngularFireAuthModule,
-    AngularFireStorageModule,
-    AngularFireDatabaseModule,
-
+    RecaptchaV3Module,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers:[
-    AuthService
+    AuthService,
+    {
+      provide: RECAPTCHA_V3_SITE_KEY,
+      useValue: environment.recaptcha.siteKey
+    },
   ],
   
   bootstrap: [AppComponent]

@@ -1,0 +1,23 @@
+<div class="container-formulario">
+
+    <div id="title-formulario" class="font-indie">
+        <h2 id="title-formulario">Quer falar conosco?</h2>
+    </div>
+
+    <form class="form font-nav" [formGroup]="contactForm" (ngSubmit)="submitForm()">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required formControlName="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required formControlName="email">
+
+        <label for="message">Mensajem:</label>
+        <textarea id="message" name="message" rows="8" required formControlName="message"></textarea>
+
+
+
+        <div class="button-enviar">
+            <button class="font-indie" type="submit">Enviar</button>
+        </div>
+    </form>
+</div>

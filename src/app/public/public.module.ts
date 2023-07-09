@@ -17,6 +17,8 @@ import { predicasComponent } from './predicas/predicas.component';
 import { SociaisComponent } from './sociais/sociais.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -25,6 +27,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     CommonModule,
     PublicRoutingModule,
     SharedModule,
+    ReactiveFormsModule
   ],
   declarations: [
     QuemSomosComponent,
@@ -38,6 +41,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     predicasComponent,
     SignInComponent,
     SignUpComponent,
+    ContactFormComponent,
     
   ],
   providers: [

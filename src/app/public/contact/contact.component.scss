@@ -74,78 +74,7 @@
     color: black;
 }
 
-// FORMULARIO
 
-.container-formulario {
-    display: grid;
-    position: relative;
-    grid-template-columns: 1fr;
-    grid-gap: 15px;
-    justify-items: center;
-    align-items: center;
-    padding-bottom: 39px;
-}
-
-#title-formulario {
-    position: relative;
-    display: grid;
-    color: #f1d692;
-    font-size: 2.7rem;
-    font-weight: 400;
-    top: 15px;
-
-}
-
-.title-formulario {
-    position: relative;
-    display: grid;
-    color: #f1d692;
-    font-size: 2.7rem;
-    font-weight: 400;
-}
-
-.form {
-    display: grid;
-    position: relative;
-    grid-template-columns: 1fr;
-    grid-gap: 10px;
-    width: 584px;
-}
-
-.form label {
-    font-weight: bold;
-}
-
-.form input[type="text"],
-.form input[type="email"],
-.form textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.form button {
-    padding: 11px 16px;
-    background-color: #ffc73a;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 18px;
-    width: 100%;
-    max-width: 12rem;
-}
-
-.button-enviar {
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.form button:hover {
-    background-color: goldenrod;
-}
 
 
 // version web--
