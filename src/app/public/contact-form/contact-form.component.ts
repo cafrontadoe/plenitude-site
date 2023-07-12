@@ -34,7 +34,6 @@ export class ContactFormComponent {
   submitForm(): void {
     if (this.contactForm.valid) {
       // Process form submission
-      console.log(this.contactForm.value);
       // You can send the form data to your backend or perform any other necessary actions here
       // Reset the form after submission
       this.reCaptchaV3Service.execute('importantAction')
