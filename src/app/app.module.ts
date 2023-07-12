@@ -40,7 +40,7 @@ import { environment } from 'src/environments/environment';
     AuthService,
     {
       provide: RECAPTCHA_V3_SITE_KEY,
-      useValue: environment.RECAPTCHA.SITE_KEY
+      useValue: environment.RECAPTCHA_SITE_KEY
     },
   ],
   
