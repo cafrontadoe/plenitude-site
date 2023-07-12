@@ -11,9 +11,6 @@ import { environment } from 'src/environments/environment';
 })
 export class NavBarComponent implements OnInit {
   @ViewChild('sidenav') sidenav: MatSidenav | undefined;
-
-  envr = environment.production ? 'productin' : 'dev';
-
   opened: boolean = false;
   public activeTab: any;
 
