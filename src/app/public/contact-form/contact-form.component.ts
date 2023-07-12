@@ -10,7 +10,6 @@ import { ReCaptchaV3Service } from 'ng-recaptcha';
 export class ContactFormComponent {
   contactForm: FormGroup;
   isReCaptchaValid: boolean = false;
-  reCaptchaSiteKey: string = '6LcxywgnAAAAABy3NRTQXVfCVQNjljX59XzIDHCF';
 
   constructor(
     private formBuilder: FormBuilder,
@@ -40,7 +39,6 @@ export class ContactFormComponent {
       // Reset the form after submission
       this.reCaptchaV3Service.execute('importantAction')
     .subscribe((token: string) => {
-      console.debug(`Token [${token}] generated`);
     });
       this.contactForm.reset();
     } else {

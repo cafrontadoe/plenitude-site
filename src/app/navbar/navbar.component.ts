@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatSidenav} from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -10,6 +11,8 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
   @ViewChild('sidenav') sidenav: MatSidenav | undefined;
+
+  envr = environment.production ? 'productin' : 'dev';
 
   opened: boolean = false;
   public activeTab: any;
