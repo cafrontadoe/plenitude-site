@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { PlacesService } from 'src/app/shared/services/places.service';
 import { tap, catchError } from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
 
 
 
@@ -12,6 +11,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./testimony.component.scss']
 })
 export class TestimonyComponent implements OnInit, AfterViewInit {
+  placeId = 'ChIJX5qshlphYAwRaOTvfq48S1A';
   @ViewChild('googleReviewContainer') googleReviewContainer: any;
 
   service: any;
@@ -49,7 +49,7 @@ export class TestimonyComponent implements OnInit, AfterViewInit {
     console.log(this.googleReviewContainer.nativeElement);
     this.placesService = new PlacesService();
 
-    this.placesService.getPlaceDetails(environment.PLACE_ID, this.googleReviewContainer.nativeElement)
+    this.placesService.getPlaceDetails(this.placeId, this.googleReviewContainer.nativeElement)
       .pipe(
         tap((reviews: any[]) => {
           this.reviews = reviews;

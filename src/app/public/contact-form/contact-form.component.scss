@@ -1,14 +1,6 @@
 // FORMULARIO
 
-.container-formulario {
-    display: grid;
-    position: relative;
-    grid-template-columns: 1fr;
-    grid-gap: 15px;
-    justify-items: center;
-    align-items: center;
-    padding-bottom: 39px;
-}
+
 
 #title-formulario {
     position: relative;
@@ -75,12 +67,13 @@
 
 // /* Diseño para la versión móvil */
 @media (max-width: 768px) {
-    .container-formulario {
-        display: grid;
-        position: relative;
+    
+    .form {
+        width: auto;
     }
 
     .form button {
         margin-left: 10px;
     }
+
 }
