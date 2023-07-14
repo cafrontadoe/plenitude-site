@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'IGREJAPLENITUDE FUNCHAL';
+  title = 'IGREJA PLENITUDE FUNCHAL';
 
 
   ngOnInit() {
