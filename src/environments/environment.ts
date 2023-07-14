@@ -1,5 +1,8 @@
 export const environment = {
     production: false,
-    RECAPTCHA_SITE_KEY: '6Lf7UL0cAAAAAIt_m-d24WG4mA1XFPHE8yVckc5S',
-    PLACE_ID: 'ChIJX5qshlphYAwRaOTvfq48S1A'
+    RECAPTCHA_SITE_KEY: 'test',
+    PLACE_ID: 'test',
+    GOOGLE_PLACE_KEY: 'test',
+    PUBLIC_KEY: 'test',
+    PRIVATE_MESSAGE: 'test'
 };
