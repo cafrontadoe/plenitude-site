@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "start": "node -r ./node_modules/dotenv/config ./node_modules/@angular/cli/bin/ng serve",
+    "build": "node -r ./node_modules/dotenv/config ./node_modules/@angular/cli/bin/ng build",
+    "watch": "node -r ./node_modules/dotenv/config ./node_modules/@angular/cli/bin/ng build --watch --configuration development",
+    "test": "node -r ./node_modules/dotenv/config ./node_modules/@angular/cli/bin/ng test"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +21,8 @@
     "@angular/router": "^16.0.0",
     "@stripe/stripe-js": "^1.54.0",
     "@types/googlemaps": "^3.43.3",
+    "@vercel/node": "^2.15.5",
+    "dotenv": "^16.3.1",
     "ng-recaptcha": "^12.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
