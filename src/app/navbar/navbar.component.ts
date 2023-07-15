@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatSidenav} from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
-import { environment } from 'src/environments/environment';
 
 
 @Component({

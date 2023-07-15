@@ -14,7 +14,7 @@ import { DashboardComponent } from './private/dashboard/dashboard.component';
 import { AuthService } from './shared/services/auth.service';
 import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { environment } from 'src/environments/environment';
+import { environmentDotenv } from '../dotenv';
 
 
 @NgModule({
@@ -40,7 +40,7 @@ import { environment } from 'src/environments/environment';
     AuthService,
     {
       provide: RECAPTCHA_V3_SITE_KEY,
-      useValue: environment.RECAPTCHA_SITE_KEY
+      useValue: environmentDotenv.RECAPTCHA_SITE_KEY
     },
   ],
   
