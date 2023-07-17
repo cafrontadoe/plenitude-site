@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { PlacesService } from 'src/app/shared/services/places.service';
 import { tap, catchError } from 'rxjs/operators';
-import { environmentDotenv } from 'src/dotenv';
 
 
 
@@ -16,6 +15,7 @@ export class TestimonyComponent implements OnInit, AfterViewInit {
 
   service: any;
   public reviews: Array<any> = [];
+  site = import.meta.env['NG_APP_PLACE_ID'];
 
   constructor(private placesService: PlacesService) { 
 
@@ -49,7 +49,7 @@ export class TestimonyComponent implements OnInit, AfterViewInit {
     console.log(this.googleReviewContainer.nativeElement);
     this.placesService = new PlacesService();
 
-    this.placesService.getPlaceDetails(environmentDotenv.PLACE_ID, this.googleReviewContainer.nativeElement)
+    this.placesService.getPlaceDetails(this.site, this.googleReviewContainer.nativeElement)
       .pipe(
         tap((reviews: any[]) => {
           this.reviews = reviews;

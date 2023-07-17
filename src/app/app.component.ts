@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { filter, fromEvent, take } from 'rxjs';
-import { environmentDotenv } from '../dotenv';
 
 
 @Component({
@@ -18,7 +17,7 @@ export class AppComponent {
 
   loadScript(): void {
     const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?v=3.exp&key=${environmentDotenv.GOOGLE_PLACE_KEY}&libraries=places`;
+    script.src = `https://maps.googleapis.com/maps/api/js?v=3.exp&key=${import.meta.env['NG_APP_GOOGLE_PLACE_KEY']}&libraries=places`;
     script.async = true;
     script.defer = true;
   
