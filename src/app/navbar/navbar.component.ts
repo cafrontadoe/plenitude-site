@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatSidenav} from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
-import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -13,6 +12,9 @@ export class NavBarComponent implements OnInit {
   @ViewChild('sidenav') sidenav: MatSidenav | undefined;
   opened: boolean = false;
   public activeTab: any;
+  env1 = 'tales';
+  env = import.meta.env['NG_APP_VERSION'];
+
 
   constructor(private router: Router) {
     this.activeTab = "Demo";

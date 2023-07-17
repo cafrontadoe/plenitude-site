@@ -11,11 +11,11 @@ import { tap, catchError } from 'rxjs/operators';
   styleUrls: ['./testimony.component.scss']
 })
 export class TestimonyComponent implements OnInit, AfterViewInit {
-  placeId = 'ChIJX5qshlphYAwRaOTvfq48S1A';
   @ViewChild('googleReviewContainer') googleReviewContainer: any;
 
   service: any;
   public reviews: Array<any> = [];
+  site = import.meta.env['NG_APP_PLACE_ID'];
 
   constructor(private placesService: PlacesService) { 
 
@@ -49,7 +49,7 @@ export class TestimonyComponent implements OnInit, AfterViewInit {
     console.log(this.googleReviewContainer.nativeElement);
     this.placesService = new PlacesService();
 
-    this.placesService.getPlaceDetails(this.placeId, this.googleReviewContainer.nativeElement)
+    this.placesService.getPlaceDetails(this.site, this.googleReviewContainer.nativeElement)
       .pipe(
         tap((reviews: any[]) => {
           this.reviews = reviews;
