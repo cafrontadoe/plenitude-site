@@ -18,7 +18,7 @@ export class TestimonyComponent implements OnInit, AfterViewInit {
   site = import.meta.env['NG_APP_PLACE_ID'];
 
   constructor(private placesService: PlacesService) { 
-
+    console.log('ssss');
   }
 
   ngOnInit() {
