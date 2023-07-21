@@ -20,4 +20,33 @@
     margin-bottom:10px;
    }
 
+
+   .photos{
+    width: 131px;
+    display: grid;
+    border-radius: 68px;
+    border: solid;
+    border-color: black;
+    align-items: center;
+    margin: 0px 20px 34px;
+    padding: 7px 0;
+    box-shadow: 5px 5px 26px gray;
+    
+   }
   
+   .photos:hover {
+    background-color: gray;
+   }
+
+   // version web--
+@media (max-width: 769px) {
+}
+
+// ---version mobile 
+@media (max-width: 768px) {
+ 
+ .photos{
+  width: 99px;
+}
+
+  }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CheckboxControlValueAccessor, CheckboxRequiredValidator, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReCaptchaV3Service } from 'ng-recaptcha';
 
 @Component({
@@ -20,7 +20,8 @@ export class ContactFormComponent {
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required],
-      reCaptcha: [null, Validators.required]
+      reCaptcha: [null, Validators.required],
+      Checkmark: [null, Validators.required]
     });
   }
 
@@ -46,3 +47,37 @@ export class ContactFormComponent {
     }
   }
 }
+
+
+// // Obtener elementos del DOM
+// const mostrarAviso = document.getElementById('mostrarAviso');
+// const avisoPopup = document.getElementById('avisoPopup');
+// const cerrarAvisoBtn = document.getElementById('cerrarAviso');
+
+// // Mostrar el aviso emergente al hacer clic en el botón "Mostrar Aviso"
+// mostrarAviso.addEventListener('click', function() {
+//   avisoPopup.style.display = 'block';
+// });
+
+// // Cerrar el aviso emergente al hacer clic en el botón "Cerrar"
+// cerrarAvisoBtn.addEventListener('click', function() {
+//   avisoPopup.style.display = 'none';
+// });
+
+// if (mostrarAviso !== null) {
+//   mostrarAviso.addEventListener('click', function() {
+//     // Código que se ejecuta cuando se hace clic en el elemento 'mostrarAviso'
+//   });
+// }
+
+// if (cerrarAvisoBtn !== null) {
+//   cerrarAvisoBtn.addEventListener('click', function() {
+//     // Código que se ejecuta cuando se hace clic en el elemento 'cerrarAviso'
+//   });
+// }
+
+// if (avisoPopup !== null) {
+//   avisoPopup.style.display('click', function() {
+//     // Código que se ejecuta cuando se hace clic en el elemento 'mostrarAviso'
+//   });
+// }
