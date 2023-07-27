@@ -1,0 +1,37 @@
+.title-donation {
+    display: grid;
+    color: goldenrod;
+    font-size: 39px;
+    margin-top: 188px;
+    text-align: center;
+}
+
+
+.pagamento-container {
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 9rem;
+    grid-template-columns: repeat(4, minmax(15rem, 1fr));
+    margin-top: 77px;
+}
+
+.container-security {
+    grid-template-columns:1fr 1fr;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 1rem;
+
+}
+
+
+.material-security {
+    top: 22px;
+    position: relative;
+    text-align: right;
+    left: 473px;
+    color: green;
+}
+
+.title-security {
+font-size: large;
+}
