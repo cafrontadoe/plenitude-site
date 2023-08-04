@@ -33,3 +33,16 @@ https://search.google.com/local/writereview?placeid=ChIJX5qshlphYAwRaOTvfq48S1A
 
 ## angular auth 
 https://www.positronx.io/full-angular-firebase-authentication-system/
+
+
+## generate RSA
+https://cryptotools.net/rsagen
+
+## dotenv vault
+
+npx dotenv-vault@latest new
+
+npx dotenv-vault@latest push
+
+npx dotenv-vault@latest keys production
+
