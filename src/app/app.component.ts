@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { filter, fromEvent, take } from 'rxjs';
+import { AuthService } from './shared/services/auth.service';
 
 
 @Component({
@@ -10,6 +11,22 @@ import { filter, fromEvent, take } from 'rxjs';
 export class AppComponent {
   title = 'IGREJA PLENITUDE FUNCHAL';
 
+  constructor(private authService: AuthService) {
+    this.loginApp();
+  }
+
+  loginApp() {
+    const  privateMessage = import.meta.env['NG_APP_PRIVATE_MESSAGE'];
+    this.authService.login(privateMessage).subscribe({
+      next: response => {
+        console.log('POST Response:', response);
+      },
+      error: error => {
+        console.error('POST Error:', error);
+      }
+    });
+
+  }
 
   ngOnInit() {
     this.loadScript();
