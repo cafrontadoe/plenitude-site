@@ -8,6 +8,7 @@ import { DonationsComponent } from './donations/donations.component';
 import { SociaisComponent } from './sociais/sociais.component';
 import { predicasComponent } from './predicas/predicas.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { SuccessDonationComponent } from './success-donation/success-donation.component';
 
 
 
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'testimony', component: TestimonyComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'donations', component: DonationsComponent },
+  { path: 'success-donation', component: SuccessDonationComponent },
   { path: 'predicas', component: predicasComponent },
   { path: 'Sociais', component: SociaisComponent },
   { path: 'sign-in', component: SignInComponent },

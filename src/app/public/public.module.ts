@@ -17,6 +17,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SuccessDonationComponent } from './success-donation/success-donation.component';
 
 
 
@@ -39,6 +40,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     SignInComponent,
     SignUpComponent,
     ContactFormComponent,
+    SuccessDonationComponent,
     
   ],
   providers: [
