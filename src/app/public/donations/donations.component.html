@@ -16,39 +16,41 @@
     </mat-card-content>
   </mat-card> -->
 
-  <!-- <div class="imagen-donation">
+<!-- <div class="imagen-donation">
     <img src="/assets/Malaquias.jpg" alt="dizimos">
   </div>  -->
 
-<h2 class="title-donation font-indie" >Temos diversas opções para que possa fazer sua doação em nosso ministério</h2>
+<h2 class="title-donation font-indie">Temos diversas opções para que possa fazer sua doação em nosso ministério</h2>
+
+<div class="checkout-card">
+
+  <div class="checkout-card__container">
+
+    <button [disabled]="loadingCheckout" (click)="donate()" mat-raised-button>
+      Doar online
+    </button>
+  </div>
+</div>
 
 <div class="pagamento-container">
-<div class="multibanco-pagamento">
-  <a href="" target="_blank">
-      <img class="icon-multibanco" src="/assets/multibanco.png " alt="mb">
-  </a>
+  <div class="multibanco-pagamento">
+    <img class="icon-multibanco" src="/assets/multibanco.png " alt="mb">
   </div>
 
-
   <div class="mbway-pagamento">
-    <a href="" target="_blank">
-        <img class="icon-mbway" src="/assets/mbway.png " alt="mbway">
-    </a>
-    </div>
+    <img class="icon-mbway" src="/assets/mbway.png " alt="mbway">
+  </div>
 
-    <div class="stripe-pagamento">
-      <a href="" target="_blank">
-          <img class="icon-stripe" src="/assets/stripe.png " alt="stripe">
-      </a>
-      </div>
+  <div class="stripe-pagamento">
+    <img class="icon-stripe" src="/assets/stripe.png " alt="stripe">
+  </div>
 
-      <div class="paypal-pagamento">
-        <a href="" target="_blank">
-            <img class="icon-paypal" src="/assets/paypal.png " alt="">
-        </a>
-        </div>
-      </div>
+  <div class="paypal-pagamento">
+    <img class="icon-paypal" src="/assets/paypal.png " alt="">
+  </div>
+</div>
 <div class="container-security">
-      <mat-icon class="material-security">gpp_good</mat-icon><h4 class="title-security">Este site é seguro,
-        Não efetue as suas transacções fora deste.</h4>
-      </div>
+  <mat-icon class="material-security">gpp_good</mat-icon>
+  <h4 class="title-security">Este site é seguro,
+    Não efetue as suas transacções fora deste.</h4>
+</div>
