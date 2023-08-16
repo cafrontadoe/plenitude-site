@@ -25,24 +25,8 @@ export class TestimonyComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // const request = {
-    //   placeId: this.placeId,
-    //   fields: ['reviews']
-    // };
-    // this.service = new google.maps.places.PlacesService(document.getElementById('googleReviews'));
-    // console.log('this.service', this.service);
-    // this.service.getDetails(request, this.callback);
-
     this.getPlaceReviews();
   }
-  
-  // public callback = (place: any, status: any) => {
-  //   console.log('place', place);
-  //   console.log('status', status);
-  //   if (status === google.maps.places.PlacesServiceStatus.OK) {
-  //     this.reviews = place.reviews.slice();
-  //   }
-  // };
 
   getPlaceReviews(): void {
     console.log(this.googleReviewContainer.nativeElement);
@@ -52,7 +36,6 @@ export class TestimonyComponent implements OnInit, AfterViewInit {
       .pipe(
         tap((reviews: any[]) => {
           this.reviews = reviews;
-          console.log('Reviews:', reviews);
         }),
         catchError((error) => {
           console.error('Error:', error);
