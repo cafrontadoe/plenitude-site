@@ -15,7 +15,6 @@ export class PlacesService {
   }
 
   getPlaceDetails(placeId: string, container: HTMLDivElement): Observable<any> {
-    console.log(container)
     this.placesService = new google.maps.places.PlacesService(container);
 
     const request = {
