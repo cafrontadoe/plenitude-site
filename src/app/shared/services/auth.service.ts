@@ -7,8 +7,6 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  site = import.meta.env['NG_APP_PLACE_ID'];
-
   private apiHost = import.meta.env['NG_APP_BACKEND_HOST'];
 
   constructor(private http: HttpClient) {}
