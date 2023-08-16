@@ -15,7 +15,7 @@ export class TestimonyComponent implements OnInit, AfterViewInit {
 
   service: any;
   public reviews: Array<any> = [];
-  site = import.meta.env['NG_APP_BACKEND_HOST'];
+  site = import.meta.env['NG_APP_PLACE_ID'];
 
   constructor(private placesService: PlacesService) { 
   }
