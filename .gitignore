@@ -50,3 +50,5 @@ Thumbs.db
 !.env.vault
 
 .env.me
+.env
+.env.production
