@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { filter, fromEvent, take } from 'rxjs';
+import { AuthService } from './shared/services/auth.service';
 
 
 @Component({
@@ -10,9 +11,31 @@ import { filter, fromEvent, take } from 'rxjs';
 export class AppComponent {
   title = 'IGREJA PLENITUDE FUNCHAL';
 
+  constructor(private authService: AuthService) {
+  
+  }
 
   ngOnInit() {
     this.loadScript();
+    this.loginBackend();
+  }
+
+  loginBackend() {
+    this.authService.login().subscribe({
+      next: (response) => {
+        // Handle the successful response here
+        console.log('Login successful:', response);
+      },
+      error: (error) => {
+        // Handle errors here
+        console.error('Login failed:', error);
+      },
+      complete: () => {
+        // This part is optional and can be omitted if not needed
+        console.log('Login completed');
+      }
+    });
+    
   }
 
   loadScript(): void {
