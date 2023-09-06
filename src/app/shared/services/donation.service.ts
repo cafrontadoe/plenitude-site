@@ -14,14 +14,15 @@ export class DonationService {
   constructor(private http: HttpClient) { }
 
   public checkout(): Observable<{ url: string }> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-      }),
-      withCredentials: true, // Habilita el intercambio de cookies
-    };
+    // const httpOptions = {
+    //   headers: new HttpHeaders({
+    //     'Content-Type': 'application/json',
+    //   }),
+    //   withCredentials: true, // Habilita el intercambio de cookies
+    // };
     const path = `${this.apiHost}/api/v1/payments/checkout`;
-    return this.http.get<{ url: string }>(path, httpOptions);
+    // return this.http.get<{ url: string }>(path, httpOptions);
+    return this.http.get<{ url: string }>(path);
   }
 
   
