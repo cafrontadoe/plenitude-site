@@ -46,7 +46,7 @@ Thumbs.db
 .env*
 .flaskenv*
 !.env.project
-!.env
+.env
 !.env.vault
 
 .env.me

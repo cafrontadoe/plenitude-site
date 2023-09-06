@@ -36,7 +36,6 @@ export class QuemSomosComponent implements OnInit {
   }
 
   showCompletedHistory() {
-    console.log('arrive');
     this.showCompleteHistory = true;
   }
 

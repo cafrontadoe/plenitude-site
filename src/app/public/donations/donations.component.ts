@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DonationService } from '../../shared/services/donation.service';
 
 @Component({
   selector: 'app-donations',
@@ -8,8 +9,22 @@ import { Component } from '@angular/core';
 export class DonationsComponent {
   donationAmount: number = 0;
   fullName: string = '';
+  loadingCheckout = false;
 
-  // constructor(private firebaseService: FirebaseService) {}
+  constructor(private donationService: DonationService) { }
+
+  donate() {
+    this.loadingCheckout = true;
+    this.donationService.checkout()
+      .subscribe({
+        next: (resp) => {
+          window.location.href = resp.url;
+        },
+        error: () => {
+          this.loadingCheckout = false;
+        }
+      });
+  }
 
   // submitDonation(): void {
   //   this.firebaseService.storeDonation(this.donationAmount, this.fullName)

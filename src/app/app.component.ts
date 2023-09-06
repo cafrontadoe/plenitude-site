@@ -25,6 +25,9 @@ export class AppComponent {
       next: (response) => {
         // Handle the successful response here
         console.log('Login successful:', response);
+        // Usage:
+      const jwt = this.getCookie('jwt');
+      console.log(jwt, jwt);
       },
       error: (error) => {
         // Handle errors here
@@ -53,6 +56,17 @@ export class AppComponent {
   
     scriptLoaded$.subscribe(() => {
     });
+  }
+
+  getCookie(name: any) {
+    const cookies = document.cookie.split('; ');
+    for (const cookie of cookies) {
+      const [cookieName, cookieValue] = cookie.split('=');
+      if (cookieName === name) {
+        return decodeURIComponent(cookieValue);
+      }
+    }
+    return null; // Return null if the cookie is not found
   }
   
 }

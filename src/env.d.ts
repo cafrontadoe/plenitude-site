@@ -31,12 +31,12 @@ declare var process: {
 
 // If your project references @types/node directly (in you) or indirectly (as in RxJS < 7.6.0),
 // you might need to use the following declaration merging.
-// declare namespace NodeJS {
-//   export interface ProcessEnv {
-//     readonly NG_APP_ENV: string;
-//     // Add your environment variables below
-//   }
-// }
+declare namespace NodeJS {
+  export interface ProcessEnv {
+    readonly NG_APP_ENV: string;
+    // Add your environment variables below
+  }
+}
 
 // If you're using Angular Universal and process.env notation, you'll need to add the following to your tsconfig.server.json:
 /* In your tsconfig.server.json */
