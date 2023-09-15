@@ -14,7 +14,8 @@ import { DashboardComponent } from './private/dashboard/dashboard.component';
 import { AuthService } from './shared/services/auth.service';
 import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { JwtInterceptor } from './shared/interceptors/jwt-interceptor';
 
 
 @NgModule({
@@ -43,6 +44,8 @@ import { HttpClientModule } from '@angular/common/http';
       provide: RECAPTCHA_V3_SITE_KEY,
       useValue: import.meta.env['NG_APP_RECAPTCHA_SITE_KEY'] 
     },
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+
   ],
   
   bootstrap: [AppComponent]
