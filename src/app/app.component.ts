@@ -17,28 +17,20 @@ export class AppComponent {
 
   ngOnInit() {
     this.loadScript();
-    this.loginBackend();
+    if (!localStorage.getItem('jwt')) {
+      this.loginBackend();
+    }
   }
 
   loginBackend() {
     this.authService.login().subscribe({
-      next: (response) => {
-        // Handle the successful response here
-        console.log('Login successful:', response);
-        // Usage:
-      const jwt = this.getCookie('jwt');
-      console.log(jwt, jwt);
+      next: (response: any) => {
+        localStorage.setItem('jwt', response.token);
       },
       error: (error) => {
-        // Handle errors here
-        console.error('Login failed:', error);
-      },
-      complete: () => {
-        // This part is optional and can be omitted if not needed
-        console.log('Login completed');
+        console.error('Login failed:');
       }
     });
-    
   }
 
   loadScript(): void {
@@ -58,15 +50,5 @@ export class AppComponent {
     });
   }
 
-  getCookie(name: any) {
-    const cookies = document.cookie.split('; ');
-    for (const cookie of cookies) {
-      const [cookieName, cookieValue] = cookie.split('=');
-      if (cookieName === name) {
-        return decodeURIComponent(cookieValue);
-      }
-    }
-    return null; // Return null if the cookie is not found
-  }
   
 }
