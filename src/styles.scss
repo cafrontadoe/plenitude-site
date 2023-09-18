@@ -96,10 +96,6 @@ body {
   position: relative;
 }
 
-.mat-sidenav-container {
-  height: 100vh;
-}
-
 
 .white-color {
   color: var(--white-color);
@@ -237,7 +233,10 @@ hr {
   max-width: 1000px;
   min-width: 250px;
   margin: auto;
+}
 
+.overflow-hidden {
+  overflow: hidden !important;
 }
 
 /* Diseño para la versión móvil */
