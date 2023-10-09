@@ -132,6 +132,23 @@
     margin-top: 10px;
   }
   
+  .error-message {
+    color: red;
+    font-size: 0.8em; /* Puedes ajustar el tamaño de fuente según tus preferencias */
+    margin-top: 4px; /* Espacio adicional arriba de los mensajes de error */
+  }
+
+  .is-invalid {
+    outline: 2px solid red;
+  }
+
+  .check-error-message {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    line-height: 0;
+    margin-bottom: 1rem; 
+  }
 
 
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CheckboxControlValueAccessor, CheckboxRequiredValidator, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CheckboxControlValueAccessor, CheckboxRequiredValidator, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ReCaptchaV3Service } from 'ng-recaptcha';
 
 @Component({
@@ -10,10 +10,11 @@ import { ReCaptchaV3Service } from 'ng-recaptcha';
 export class ContactFormComponent {
   contactForm: FormGroup;
   isReCaptchaValid: boolean = false;
+  isSubmitted = false;
 
   constructor(
     private formBuilder: FormBuilder,
-    private reCaptchaV3Service: ReCaptchaV3Service
+    // private reCaptchaV3Service: ReCaptchaV3Service
     ) {
 
     this.contactForm = this.formBuilder.group({
@@ -21,8 +22,17 @@ export class ContactFormComponent {
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required],
       reCaptcha: [null, Validators.required],
-      Checkmark: [null, Validators.required]
+      checkmark: [false, this.checkmarkValidator],
     });
+  }
+
+  checkmarkValidator(control: FormControl) {
+    const value = control.value;
+    if (value === true) {
+      return null; // Válido si el checkbox está marcado
+    } else {
+      return { required: true }; // No válido si el checkbox no está marcado
+    }
   }
 
   ngOnInit(): void {
@@ -33,17 +43,18 @@ export class ContactFormComponent {
   }
   
   submitForm(): void {
+    this.isSubmitted = true; 
     if (this.contactForm.valid) {
       // Process form submission
       // You can send the form data to your backend or perform any other necessary actions here
       // Reset the form after submission
-      this.reCaptchaV3Service.execute('importantAction')
-    .subscribe((token: string) => {
-    });
-      this.contactForm.reset();
+      // this.reCaptchaV3Service.execute('importantAction')
+    // .subscribe((token: string) => {
+    // });
+      // this.contactForm.reset();
     } else {
       // Handle form validation errors
-      alert('Please fill in all required fields.');
+      // alert('Please fill in all required fields.');
     }
   }
 }
