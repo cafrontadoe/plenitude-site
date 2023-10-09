@@ -40,8 +40,7 @@ import { SuccessDonationComponent } from './success-donation/success-donation.co
     SignInComponent,
     SignUpComponent,
     ContactFormComponent,
-    SuccessDonationComponent,
-    
+    SuccessDonationComponent,    
   ],
   providers: [
     PlacesService,
