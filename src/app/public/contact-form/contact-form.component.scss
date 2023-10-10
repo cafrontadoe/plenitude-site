@@ -98,7 +98,8 @@
   }
 
   .text-checkmark {
-    cursor: pointer;
+    // cursor: pointer;
+    padding-top: 5px;
   }
   .text-checkmark:hover {
    background-color: rgba(183, 180, 180, 0.761);

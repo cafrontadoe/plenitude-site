@@ -41,15 +41,14 @@ export class DonationsComponent {
   callRenewToken() {
     this.renewTokenTimes = this.renewTokenTimes++;
     this.loginBackend();
-    this.donate();
-
-    
+   
   }
 
   loginBackend() {
     this.authService.login().subscribe({
       next: (response: any) => {
         localStorage.setItem('jwt', response.token);
+        this.donate();
       },
       error: (error) => {
         console.error('Login failed:');
@@ -57,13 +56,4 @@ export class DonationsComponent {
     });
   }
 
-  // submitDonation(): void {
-  //   this.firebaseService.storeDonation(this.donationAmount, this.fullName)
-  //     .then(() => {
-  //       console.log('Donation successful');
-  //     })
-  //     .catch((error) => {
-  //       console.error('Error storing donation', error);
-  //     });
-  // }
 }

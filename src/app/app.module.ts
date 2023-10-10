@@ -16,6 +16,7 @@ import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { JwtInterceptor } from './shared/interceptors/jwt-interceptor';
+import {  AlertModule }  from 'ngx-bootstrap/alert';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { JwtInterceptor } from './shared/interceptors/jwt-interceptor';
     RecaptchaV3Module,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AlertModule.forRoot()
   ],
   providers:[
     AuthService,
