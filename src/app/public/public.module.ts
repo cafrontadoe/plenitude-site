@@ -18,6 +18,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SuccessDonationComponent } from './success-donation/success-donation.component';
+import { TermsComponent } from './terms/terms.component';
 
 
 
@@ -40,7 +41,8 @@ import { SuccessDonationComponent } from './success-donation/success-donation.co
     SignInComponent,
     SignUpComponent,
     ContactFormComponent,
-    SuccessDonationComponent,    
+    SuccessDonationComponent,
+    TermsComponent,    
   ],
   providers: [
     PlacesService,

@@ -1,27 +1,39 @@
 import { Component } from '@angular/core';
-import { CheckboxControlValueAccessor, CheckboxRequiredValidator, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { ReCaptchaV3Service } from 'ng-recaptcha';
+import { IContacts } from 'src/app/shared/models/contacts.model';
+import { AuthService } from 'src/app/shared/services/auth.service';
+import { ContactsService } from 'src/app/shared/services/contacts.service';
 
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.scss']
+  styleUrls: ['./contact-form.component.scss'],
 })
 export class ContactFormComponent {
   contactForm: FormGroup;
   isReCaptchaValid: boolean = false;
   isSubmitted = false;
+  renewTokenTimes = 0;
+  loadingCheckout = false;
+  showSuccessNotify = false;
 
   constructor(
     private formBuilder: FormBuilder,
-    // private reCaptchaV3Service: ReCaptchaV3Service
-    ) {
-
+    private contactsService: ContactsService,
+    private authService: AuthService
+  ) // private reCaptchaV3Service: ReCaptchaV3Service
+  {
     this.contactForm = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required],
-      reCaptcha: [null, Validators.required],
+      // reCaptcha: [null, Validators.required],
       checkmark: [false, this.checkmarkValidator],
     });
   }
@@ -39,26 +51,66 @@ export class ContactFormComponent {
     this.createContactForm();
   }
 
-  createContactForm(): void {
-  }
-  
+  createContactForm(): void {}
+
   submitForm(): void {
-    this.isSubmitted = true; 
+    this.isSubmitted = true;
     if (this.contactForm.valid) {
-      // Process form submission
-      // You can send the form data to your backend or perform any other necessary actions here
-      // Reset the form after submission
-      // this.reCaptchaV3Service.execute('importantAction')
-    // .subscribe((token: string) => {
-    // });
-      // this.contactForm.reset();
-    } else {
-      // Handle form validation errors
-      // alert('Please fill in all required fields.');
+      this.callCreateContactUs();
     }
   }
-}
 
+  callCreateContactUs() {
+    this.loadingCheckout = true;
+    const contacts: IContacts = {
+      name: this.contactForm.value.name,
+      email: this.contactForm.value.email,
+      message: this.contactForm.value.message,
+    };
+    this.contactsService.createContactUs(contacts).subscribe({
+      next: (response: any) => {
+        this.showSuccessNotify = true;
+        setTimeout(() => {
+          this.showSuccessNotify = false;
+        }, 2000);
+        this.contactForm.reset();
+        this.isSubmitted = false;
+
+      },
+      error: (err: any) => {
+        if (
+          err.error.error.name === 'TokenExpiredError' &&
+          this.renewTokenTimes === 0
+        ) {
+          this.callRenewToken();
+        } else if (err.error.error.name === 'TokenExpiredError') {
+          alert('recarregue a página e tente novamente');
+          this.loadingCheckout = false;
+        } else {
+          this.loadingCheckout = false;
+        }
+      },
+    });
+  }
+
+  callRenewToken() {
+    this.renewTokenTimes = this.renewTokenTimes++;
+    this.loginBackend();
+  
+  }
+
+  loginBackend() {
+    this.authService.login().subscribe({
+      next: (response: any) => {
+        localStorage.setItem('jwt', response.token);
+        this.callCreateContactUs();
+      },
+      error: (error: any) => {
+        console.error('Login failed:');
+      },
+    });
+  }
+}
 
 // // Obtener elementos del DOM
 // const mostrarAviso = document.getElementById('mostrarAviso');

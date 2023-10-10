@@ -9,6 +9,7 @@ import { SociaisComponent } from './sociais/sociais.component';
 import { predicasComponent } from './predicas/predicas.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SuccessDonationComponent } from './success-donation/success-donation.component';
+import { TermsComponent } from './terms/terms.component';
 
 
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'gallery', component: GalleryComponent },
   { path: 'donations', component: DonationsComponent },
   { path: 'success-donation', component: SuccessDonationComponent },
+  { path: 'terms', component: TermsComponent },
   { path: 'predicas', component: predicasComponent },
   { path: 'Sociais', component: SociaisComponent },
   { path: 'sign-in', component: SignInComponent },

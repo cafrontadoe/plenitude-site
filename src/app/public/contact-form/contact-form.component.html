@@ -10,7 +10,6 @@
     name="name"
     formControlName="name"
     #nameInput
-    (blur)="nameInput.focus()"
   />
   <!-- Muestra un mensaje de error si el nombre es requerido y no está completo -->
   <div
@@ -26,7 +25,6 @@
     id="email"
     formControlName="email"
     #emailInput
-    (blur)="emailInput.focus()"
   />
   <!-- Muestra un mensaje de error si el email es requerido o no es válido -->
   <div
@@ -57,19 +55,27 @@
     O message é obrigatório.
   </div>
 
-  <label class="checkbox center-content">
-    <input
-      type="checkbox"
-      formControlName="checkmark"
-    />
-    <span 
-        class="checkmark center-content"
-        [ngClass]="{ 'is-invalid': isSubmitted && contactForm.get('checkmark')?.invalid }"
-        type="button"></span>
+  <div class="alert alert-success" *ngIf="showSuccessNotify" role="alert">
+    <strong>Bom trabalho!</strong> Seu mensagem foi enviado com sucesso para a igreja.
+ </div>
+
+  <div class="center-content">
+    <label class="checkbox">
+      <input
+        type="checkbox"
+        formControlName="checkmark"
+      />
+      <span 
+          class="checkmark center-content"
+          [ngClass]="{ 'is-invalid': isSubmitted && contactForm.get('checkmark')?.invalid }"
+          type="button"></span>
+    </label>
     <span class="text-checkmark" id="mostrarAviso"
-      >Aceitar os termos e condições de processamento de dados</span
-    >
-  </label>
+        >Aceitar os <a target="_blank" href="/public/terms">termos e condições</a> de processamento de dados</span
+      >
+  </div>
+  
+
   <div
   *ngIf="isSubmitted && contactForm.get('checkmark')?.invalid"
   class="error-message check-error-message"
@@ -81,3 +87,4 @@ deve aceitar os Termos e Condições
     <button class="font-indie" type="submit">Enviar</button>
   </div>
 </form>
+

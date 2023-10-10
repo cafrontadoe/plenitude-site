@@ -20,7 +20,6 @@ export class NavBarComponent implements OnInit {
 
         if (event instanceof NavigationEnd) {
             this.activeTab = event.url;
-              console.log(event);
         }
 
 
