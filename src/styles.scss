@@ -264,6 +264,37 @@ hr {
   border-radius: var(--bs-alert-border-radius);
 }
 
+
+
+// spinner
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Asegura que esté por encima de otros elementos */
+}
+
+.spinner {
+  border: 6px solid #f3f3f3; /* Grueso del borde del spinner */
+  border-top: 6px solid var(--dorado-color); /* Color del borde superior del spinner */
+  border-radius: 50%;
+  width: 50px; /* Ancho del spinner */
+  height: 50px; /* Altura del spinner */
+  animation: spin 2s linear infinite; /* Animación de rotación */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 /* Diseño para la versión móvil */
 @media (max-width: 768px) {
   .mat-sidenav-container .mat-sidenav-content .mat-toolbar {
