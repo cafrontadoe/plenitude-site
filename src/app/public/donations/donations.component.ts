@@ -12,6 +12,7 @@ export class DonationsComponent {
   fullName: string = '';
   loadingCheckout = false;
   renewTokenTimes = 0;
+  showSpinner = false;
 
   constructor(
     private donationService: DonationService,
@@ -20,12 +21,15 @@ export class DonationsComponent {
 
   donate() {
     this.loadingCheckout = true;
+    this.showSpinner = true;
     this.donationService.checkout()
       .subscribe({
         next: (resp) => {
+          this.showSpinner = false;
           window.location.href = resp.url;
         },
         error: (err: any) => {
+          this.showSpinner = false;
           if (err.error.error.name === 'TokenExpiredError' && this.renewTokenTimes === 0) {
             this.callRenewToken();
           } else if(err.error.error.name === 'TokenExpiredError') {
